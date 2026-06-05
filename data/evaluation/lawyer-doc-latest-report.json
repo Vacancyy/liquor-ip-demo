@@ -1,0 +1,4039 @@
+{
+  "generatedAt": "2026-06-03T10:37:58.021Z",
+  "mode": "current_reports",
+  "summary": {
+    "total": 53,
+    "exactRiskAccuracy": 1,
+    "binaryRiskAccuracy": 1,
+    "identityAccuracy": 1,
+    "highRiskPrecision": 1,
+    "highRiskRecall": 1,
+    "modelErrorRate": 0,
+    "counts": {
+      "tp": 53,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    }
+  },
+  "results": [
+    {
+      "id": "lawyer-doc-ocr-image-1",
+      "title": "律师Word图片样本-1",
+      "filePath": "data/extracted/docx-images/image1.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 185,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-1",
+              "律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-2",
+      "title": "律师Word图片样本-2",
+      "filePath": "data/extracted/docx-images/image2.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-2",
+              "律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "中国贵州"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "中国贵州"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-3",
+      "title": "律师Word图片样本-3",
+      "filePath": "data/extracted/docx-images/image3.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 220,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-3",
+              "律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-4",
+      "title": "律师Word图片样本-4",
+      "filePath": "data/extracted/docx-images/image4.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 205,
+        "items": [
+          {
+            "id": "score-accused-product",
+            "label": "命中律师资料被控产品名称",
+            "score": 50,
+            "evidence": [
+              "习水窖藏"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-4",
+              "律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "贵州习水",
+              "习水"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "贵州习水",
+              "习水",
+              "习水窖藏"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-5",
+      "title": "律师Word图片样本-5",
+      "filePath": "data/extracted/docx-images/image5.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 323,
+        "items": [
+          {
+            "id": "score-accused-product",
+            "label": "命中律师资料被控产品名称",
+            "score": 50,
+            "evidence": [
+              "习水窖藏"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-5",
+              "律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "商品包装",
+              "保护的客体",
+              "经对比"
+            ]
+          },
+          {
+            "id": "score-structured-third-party-protected",
+            "label": "结构化识别显示第三方主体/标识叠加受保护包装要素",
+            "score": 30,
+            "evidence": [
+              "保护的客体",
+              "经对比",
+              "习水窖藏",
+              "圆形瓶体",
+              "梯形底座",
+              "细长瓶颈"
+            ]
+          },
+          {
+            "id": "score-court-factors-mid",
+            "label": "命中 2-3 个法院裁判外观要素",
+            "score": 15,
+            "evidence": [
+              "梯形底座",
+              "圆形瓶体",
+              "细长瓶颈"
+            ]
+          },
+          {
+            "id": "score-model-visual",
+            "label": "视觉模型提示高度近似律师裁判要素",
+            "score": 15,
+            "evidence": [
+              "梯形底座",
+              "圆形瓶体",
+              "细长瓶颈"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "保护的客体",
+              "经对比",
+              "习水窖藏"
+            ]
+          },
+          {
+            "id": "score-criterion-protected-shape-mid",
+            "label": "结构化标准：命中多个受保护瓶型/包装要素",
+            "score": 12,
+            "evidence": [
+              "圆形瓶体",
+              "梯形底座",
+              "细长瓶颈"
+            ]
+          },
+          {
+            "id": "score-criterion-confusion-reasoning",
+            "label": "结构化标准：混淆/误认/特定联系理由",
+            "score": 12,
+            "evidence": [
+              "视觉效果"
+            ]
+          },
+          {
+            "id": "score-doc-rule-overall-comparison",
+            "label": "律师文档结构化规则：整体比对 + 主要部分比对",
+            "score": 10,
+            "evidence": [
+              "整体结构"
+            ]
+          },
+          {
+            "id": "score-doc-combo-four-core-elements",
+            "label": "律师文档结构化规则：4 个以上核心包装要素",
+            "score": 24,
+            "evidence": [
+              "圆形/圆鼓状瓶体",
+              "梯形/鼓式底座",
+              "细长瓶颈/圆柱形瓶颈",
+              "酒盒/包装装潢整体近似"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-6",
+      "title": "律师Word图片样本-6",
+      "filePath": "data/extracted/docx-images/image6.jpeg",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 205,
+        "items": [
+          {
+            "id": "score-accused-product",
+            "label": "命中律师资料被控产品名称",
+            "score": 50,
+            "evidence": [
+              "碧酒"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-6",
+              "律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "碧酒"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "碧酒"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-7",
+      "title": "律师Word图片样本-7",
+      "filePath": "data/extracted/docx-images/image7.jpeg",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-7",
+              "律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "习水"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "习水"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-8",
+      "title": "律师Word图片样本-8",
+      "filePath": "data/extracted/docx-images/image8.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-8",
+              "律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "州大"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "州大"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-11",
+      "title": "律师Word图片样本-11",
+      "filePath": "data/extracted/docx-images/image11.jpeg",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-11",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "正面",
+              "左侧面",
+              "背面"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "正面",
+              "左侧面",
+              "背面"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-16",
+      "title": "律师Word图片样本-16",
+      "filePath": "data/extracted/docx-images/image16.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-16",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "洋河"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "洋河"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-18",
+      "title": "律师Word图片样本-18",
+      "filePath": "data/extracted/docx-images/image18.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-18",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "呈扁圆形",
+              "个圆形标签",
+              "品牌"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "呈扁圆形",
+              "个圆形标签",
+              "品牌"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-19",
+      "title": "律师Word图片样本-19",
+      "filePath": "data/extracted/docx-images/image19.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-19",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "汾酒集团",
+              "汾酒"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "汾酒集团",
+              "汾酒",
+              "汾酒股份有限公司"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-20",
+      "title": "律师Word图片样本-20",
+      "filePath": "data/extracted/docx-images/image20.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-20",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "正面",
+              "左侧面",
+              "背面"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "正面",
+              "左侧面",
+              "背面"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-21",
+      "title": "律师Word图片样本-21",
+      "filePath": "data/extracted/docx-images/image21.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-21",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "祥康酒",
+              "苏州祥康"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "祥康酒",
+              "苏州祥康",
+              "苏州祥康酒业集团有限公司"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-22",
+      "title": "律师Word图片样本-22",
+      "filePath": "data/extracted/docx-images/image22.jpeg",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-22",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "品牌",
+              "洋河",
+              "产品名"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "品牌",
+              "洋河",
+              "产品名"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-28",
+      "title": "律师Word图片样本-28",
+      "filePath": "data/extracted/docx-images/image28.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-28",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "品牌",
+              "无标签"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "品牌",
+              "无标签"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-31",
+      "title": "律师Word图片样本-31",
+      "filePath": "data/extracted/docx-images/image31.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-31",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "才酿缘",
+              "红酒"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "才酿缘",
+              "红酒"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-33",
+      "title": "律师Word图片样本-33",
+      "filePath": "data/extracted/docx-images/image33.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 252,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-33",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "序号",
+              "产品名称",
+              "生产单位"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "序号",
+              "产品名称",
+              "生产单位"
+            ]
+          },
+          {
+            "id": "score-doc-rule-third-party-producer",
+            "label": "律师文档结构化规则：第三方生产/销售主体",
+            "score": 12,
+            "evidence": [
+              "生产",
+              "销售"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-34",
+      "title": "律师Word图片样本-34",
+      "filePath": "data/extracted/docx-images/image34.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 220,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-34",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-35",
+      "title": "律师Word图片样本-35",
+      "filePath": "data/extracted/docx-images/image35.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 205,
+        "items": [
+          {
+            "id": "score-accused-product",
+            "label": "命中律师资料被控产品名称",
+            "score": 50,
+            "evidence": [
+              "贵州茅台",
+              "贵州茅台镇"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-35",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "贵州茅台镇",
+              "茅台镇"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "贵州茅台镇",
+              "茅台镇",
+              "贵州茅台"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-36",
+      "title": "律师Word图片样本-36",
+      "filePath": "data/extracted/docx-images/image36.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 235,
+        "items": [
+          {
+            "id": "score-accused-product",
+            "label": "命中律师资料被控产品名称",
+            "score": 50,
+            "evidence": [
+              "贵州茅台"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-36",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "一季",
+              "第一款白酒品",
+              "原浆系列推出"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "一季",
+              "第一款白酒品",
+              "原浆系列推出",
+              "为国宾茅台股份有限公司与贵州茅台集团",
+              "贵州茅台"
+            ]
+          },
+          {
+            "id": "score-doc-rule-famous-trade-dress",
+            "label": "律师文档结构化规则：有一定影响包装装潢/知名度",
+            "score": 10,
+            "evidence": [
+              "知名"
+            ]
+          },
+          {
+            "id": "score-doc-rule-third-party-producer",
+            "label": "律师文档结构化规则：第三方生产/销售主体",
+            "score": 12,
+            "evidence": [
+              "生产"
+            ]
+          },
+          {
+            "id": "score-doc-rule-same-goods-liquor",
+            "label": "律师文档结构化规则：同类白酒商品",
+            "score": 8,
+            "evidence": [
+              "白酒"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-41",
+      "title": "律师Word图片样本-41",
+      "filePath": "data/extracted/docx-images/image41.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 220,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-41",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-47",
+      "title": "律师Word图片样本-47",
+      "filePath": "data/extracted/docx-images/image47.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-47",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "品牌",
+              "产品名",
+              "视觉要素"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "品牌",
+              "产品名",
+              "视觉要素"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-53",
+      "title": "律师Word图片样本-53",
+      "filePath": "data/extracted/docx-images/image53.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-53",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "台赤",
+              "渡酒"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "台赤",
+              "渡酒"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-55",
+      "title": "律师Word图片样本-55",
+      "filePath": "data/extracted/docx-images/image55.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 220,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-55",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-58",
+      "title": "律师Word图片样本-58",
+      "filePath": "data/extracted/docx-images/image58.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 248,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-58",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "酱香白酒"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "酱香白酒"
+            ]
+          },
+          {
+            "id": "score-doc-rule-same-goods-liquor",
+            "label": "律师文档结构化规则：同类白酒商品",
+            "score": 8,
+            "evidence": [
+              "白酒"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-61",
+      "title": "律师Word图片样本-61",
+      "filePath": "data/extracted/docx-images/image61.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 220,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-61",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-67",
+      "title": "律师Word图片样本-67",
+      "filePath": "data/extracted/docx-images/image67.jpeg",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-67",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "古井"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "古井"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-71",
+      "title": "律师Word图片样本-71",
+      "filePath": "data/extracted/docx-images/image71.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-71",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "老白干"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "老白干"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-77",
+      "title": "律师Word图片样本-77",
+      "filePath": "data/extracted/docx-images/image77.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-77",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "老酒家"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "老酒家"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-79",
+      "title": "律师Word图片样本-79",
+      "filePath": "data/extracted/docx-images/image79.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 205,
+        "items": [
+          {
+            "id": "score-accused-product",
+            "label": "命中律师资料被控产品名称",
+            "score": 50,
+            "evidence": [
+              "贵州茅台"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-79",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "中国名酒",
+              "名酒",
+              "百事可"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "中国名酒",
+              "名酒",
+              "百事可",
+              "贵州茅台酒业有限公司",
+              "贵州茅台"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-88",
+      "title": "律师Word图片样本-88",
+      "filePath": "data/extracted/docx-images/image88.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 220,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-88",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-91",
+      "title": "律师Word图片样本-91",
+      "filePath": "data/extracted/docx-images/image91.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 205,
+        "items": [
+          {
+            "id": "score-accused-product",
+            "label": "命中律师资料被控产品名称",
+            "score": 50,
+            "evidence": [
+              "国酱"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-91",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "国酱",
+              "原浆速实业有",
+              "限公司"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "国酱",
+              "原浆速实业有",
+              "限公司",
+              "贵州原浆速实业有限公司"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-94",
+      "title": "律师Word图片样本-94",
+      "filePath": "data/extracted/docx-images/image94.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-94",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "汾酒"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "汾酒"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-96",
+      "title": "律师Word图片样本-96",
+      "filePath": "data/extracted/docx-images/image96.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 248,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-96",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "尊客马",
+              "马场香型白酒"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "尊客马",
+              "马场香型白酒"
+            ]
+          },
+          {
+            "id": "score-doc-rule-same-goods-liquor",
+            "label": "律师文档结构化规则：同类白酒商品",
+            "score": 8,
+            "evidence": [
+              "白酒"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-100",
+      "title": "律师Word图片样本-100",
+      "filePath": "data/extracted/docx-images/image100.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-100",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "習酒",
+              "品牌",
+              "产品名"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "習酒",
+              "品牌",
+              "产品名"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-104",
+      "title": "律师Word图片样本-104",
+      "filePath": "data/extracted/docx-images/image104.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-104",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "品牌",
+              "清酒",
+              "产品名"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "品牌",
+              "清酒",
+              "产品名"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-106",
+      "title": "律师Word图片样本-106",
+      "filePath": "data/extracted/docx-images/image106.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-106",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "品牌",
+              "金箐",
+              "产品名"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "品牌",
+              "金箐",
+              "产品名"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-108",
+      "title": "律师Word图片样本-108",
+      "filePath": "data/extracted/docx-images/image108.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 248,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-108",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "清香",
+              "汾酒",
+              "清香型白酒"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "清香",
+              "汾酒",
+              "清香型白酒",
+              "山西汾酒集团"
+            ]
+          },
+          {
+            "id": "score-doc-rule-same-goods-liquor",
+            "label": "律师文档结构化规则：同类白酒商品",
+            "score": 8,
+            "evidence": [
+              "白酒"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-110",
+      "title": "律师Word图片样本-110",
+      "filePath": "data/extracted/docx-images/image110.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-110",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "国色天香",
+              "陈藏十五年",
+              "香精皮"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "国色天香",
+              "陈藏十五年",
+              "香精皮",
+              "山西汾阳市华芝轩纸业有限公司"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-111",
+      "title": "律师Word图片样本-111",
+      "filePath": "data/extracted/docx-images/image111.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-111",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "國韵",
+              "中黔"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "國韵",
+              "中黔",
+              "贵州中黔酒业集团"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-117",
+      "title": "律师Word图片样本-117",
+      "filePath": "data/extracted/docx-images/image117.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 213,
+        "items": [
+          {
+            "id": "score-accused-product",
+            "label": "命中律师资料被控产品名称",
+            "score": 50,
+            "evidence": [
+              "杏花"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-117",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "杏花村",
+              "国色天香",
+              "清香型白酒"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "杏花村",
+              "国色天香",
+              "清香型白酒",
+              "山西杏花源酿酒股份有限公司",
+              "杏花"
+            ]
+          },
+          {
+            "id": "score-doc-rule-same-goods-liquor",
+            "label": "律师文档结构化规则：同类白酒商品",
+            "score": 8,
+            "evidence": [
+              "白酒"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-119",
+      "title": "律师Word图片样本-119",
+      "filePath": "data/extracted/docx-images/image119.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-119",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "国色天香"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "国色天香"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-120",
+      "title": "律师Word图片样本-120",
+      "filePath": "data/extracted/docx-images/image120.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-120",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "程中",
+              "國色",
+              "天香"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "程中",
+              "國色",
+              "天香"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-121",
+      "title": "律师Word图片样本-121",
+      "filePath": "data/extracted/docx-images/image121.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-121",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "品牌",
+              "产品名",
+              "筵宾王子"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "品牌",
+              "产品名",
+              "筵宾王子"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-125",
+      "title": "律师Word图片样本-125",
+      "filePath": "data/extracted/docx-images/image125.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-125",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "古韵孙武王酒",
+              "古韵",
+              "孙武王"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "古韵孙武王酒",
+              "古韵",
+              "孙武王"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-126",
+      "title": "律师Word图片样本-126",
+      "filePath": "data/extracted/docx-images/image126.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 248,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-126",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "孤竹国",
+              "浓香型白酒",
+              "唐山孤竹国"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "孤竹国",
+              "浓香型白酒",
+              "唐山孤竹国",
+              "唐山孤竹国酒业有限公司"
+            ]
+          },
+          {
+            "id": "score-doc-rule-same-goods-liquor",
+            "label": "律师文档结构化规则：同类白酒商品",
+            "score": 8,
+            "evidence": [
+              "白酒"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-127",
+      "title": "律师Word图片样本-127",
+      "filePath": "data/extracted/docx-images/image127.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-127",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "国韵珍品",
+              "黔北春",
+              "限公司"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "国韵珍品",
+              "黔北春",
+              "限公司",
+              "贵州黔北春酒业有限公司"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-130",
+      "title": "律师Word图片样本-130",
+      "filePath": "data/extracted/docx-images/image130.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-130",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "習玉春",
+              "貴茅酒"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "習玉春",
+              "貴茅酒"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-133",
+      "title": "律师Word图片样本-133",
+      "filePath": "data/extracted/docx-images/image133.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-133",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "品牌",
+              "金灿古樝",
+              "产品名"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "品牌",
+              "金灿古樝",
+              "产品名"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-135",
+      "title": "律师Word图片样本-135",
+      "filePath": "data/extracted/docx-images/image135.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-135",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "鸭溪窖",
+              "天香园色",
+              "王泰国色"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "鸭溪窖",
+              "天香园色",
+              "王泰国色"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-136",
+      "title": "律师Word图片样本-136",
+      "filePath": "data/extracted/docx-images/image136.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-136",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "东平老窖"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "东平老窖"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    },
+    {
+      "id": "lawyer-doc-ocr-image-137",
+      "title": "律师Word图片样本-137",
+      "filePath": "data/extracted/docx-images/image137.png",
+      "labelSource": "lawyer_doc_confirmed",
+      "expectedRiskLevel": "高风险",
+      "predictedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "predictedIdentity": "suspected_accused",
+      "infringementProbability": 100,
+      "modelUsed": "律师知识库规则优先",
+      "modelError": "",
+      "riskScoring": {
+        "method": "律师文件结构化规则评分",
+        "score": 100,
+        "rawScore": 240,
+        "items": [
+          {
+            "id": "score-suspected-identity",
+            "label": "线索身份已进入疑似被控分支",
+            "score": 85,
+            "evidence": [
+              "精确命中确认样本：用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。"
+            ]
+          },
+          {
+            "id": "score-confirmed-sample",
+            "label": "命中确认的高风险样本",
+            "score": 90,
+            "evidence": [
+              "律师Word图片样本-137",
+              "用户确认律师 Word 中已列出的侵权产品图片均可入库，应作为高风险侵权样本处理。",
+              "相似度 100%"
+            ]
+          },
+          {
+            "id": "score-third-party-mark",
+            "label": "命中第三方疑似侵权标识",
+            "score": 35,
+            "evidence": [
+              "样本",
+              "已缓存",
+              "赖祖",
+              "古韵"
+            ]
+          },
+          {
+            "id": "score-source-context",
+            "label": "存在销售链接、店铺、价格或线索说明",
+            "score": 10,
+            "evidence": [
+              "线索说明"
+            ]
+          },
+          {
+            "id": "score-criterion-third-party-source",
+            "label": "结构化标准：第三方来源或主体",
+            "score": 20,
+            "evidence": [
+              "赖祖",
+              "古韵"
+            ]
+          }
+        ],
+        "thresholds": {
+          "lowMax": 29,
+          "midMax": 74,
+          "highMin": 75
+        }
+      },
+      "riskExactMatch": true,
+      "binaryRiskMatch": true,
+      "identityMatch": true
+    }
+  ]
+}

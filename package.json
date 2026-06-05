@@ -1,0 +1,37 @@
+{
+  "name": "liquor-ip-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@11.6.2",
+  "scripts": {
+    "dev": "next dev -H 127.0.0.1 -p 3766",
+    "build": "next build",
+    "start": "next start -H 127.0.0.1 -p 3766",
+    "start:legacy": "node server.js",
+    "check:regression": "node scripts/check-regression.js",
+    "evaluate": "node scripts/evaluate-system.js",
+    "evaluate:reanalyze": "node scripts/evaluate-system.js --reanalyze --write-json",
+    "evaluate:external": "node scripts/evaluate-external-samples.js",
+    "evaluate:external:current": "node scripts/evaluate-external-samples.js --no-analyze",
+    "evaluate:lawyer-doc": "node scripts/evaluate-lawyer-doc-images.js",
+    "evaluate:lawyer-doc:current": "node scripts/evaluate-lawyer-doc-images.js --no-analyze",
+    "evaluate:authentic": "node scripts/evaluate-authentic-images.js",
+    "evaluate:authentic:current": "node scripts/evaluate-authentic-images.js --no-analyze",
+    "build:image-library": "node scripts/build-image-sample-library.js",
+    "build:image-library:embedding": "node scripts/build-image-sample-library.js --embedding",
+    "build:doc-structure": "node scripts/build-document-structured-rules.js",
+    "scrape:xijiu:official": "node scripts/scrape-xijiu-official-products.js",
+    "ingest:docx": "node scripts/ingest-docx-knowledge.js",
+    "ingest:docx:ocr": "node scripts/ingest-docx-knowledge.js --ocr"
+  },
+  "dependencies": {
+    "next": "16.2.6",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "sharp": "^0.34.5"
+  },
+  "overrides": {
+    "postcss": "8.5.15"
+  }
+}

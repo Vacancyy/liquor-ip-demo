@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "source": "律师资料结构化：法院裁判关注要素",
+  "factors": [
+    {
+      "id": "factor-round-bottle",
+      "name": "圆形瓶体",
+      "patterns": ["圆形瓶体", "瓶体圆形", "圆鼓状瓶体", "圆形酒瓶"],
+      "legalMeaning": "法院曾将瓶体整体造型作为混淆判断因素之一。",
+      "riskWeight": 6
+    },
+    {
+      "id": "factor-trapezoid-base",
+      "name": "梯形底座",
+      "patterns": ["梯形底座", "底座梯形", "鼓架式底座"],
+      "legalMeaning": "底座形状是整体造型近似的组成要素。",
+      "riskWeight": 6
+    },
+    {
+      "id": "factor-long-neck",
+      "name": "细长瓶颈",
+      "patterns": ["细长瓶颈", "细长型", "瓶颈细长", "圆柱形瓶颈"],
+      "legalMeaning": "瓶颈比例和形态可作为整体视觉近似要素。",
+      "riskWeight": 5
+    },
+    {
+      "id": "factor-gold-rings",
+      "name": "多层金色环圈",
+      "patterns": ["多层金色环圈", "金色环圈", "多层环圈", "金色装饰环"],
+      "legalMeaning": "瓶颈或瓶身金色环圈是律师资料反复出现的包装装潢要素。",
+      "riskWeight": 6
+    },
+    {
+      "id": "factor-raised-lines",
+      "name": "两侧凸起装饰线条",
+      "patterns": ["两侧凸起装饰线条", "凸起状装饰线条", "侧面凸起", "条状凸起"],
+      "legalMeaning": "两侧装饰线条近似可支撑整体造型混淆风险。",
+      "riskWeight": 7
+    },
+    {
+      "id": "factor-box-trade-dress",
+      "name": "酒盒包装装潢近似",
+      "patterns": ["酒盒近似", "包装装潢近似", "酒盒竖版", "整体视觉近似", "盒体结构近似"],
+      "legalMeaning": "窖藏1988酒盒及包装装潢曾被认定为有一定影响的包装、装潢。",
+      "riskWeight": 8
+    }
+  ]
+}

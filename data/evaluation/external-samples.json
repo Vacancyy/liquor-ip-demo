@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "description": "由外部公开来源和律师资料组成的第二步研判评测集。web_authentic 为公开正规商品页样本；lawyer_case 为律师资料中的典型被控/侵权案例样本。",
+  "samples": [
+    {
+      "id": "external-wine88-xijiu-1988-375",
+      "title": "外部样本-真品-习酒窖藏1988-375ml",
+      "filePath": "data/evaluation/external-images/wine88-xijiu-1988-375.jpg",
+      "sourceUrl": "https://wine88.com/en/xi-jiu/96-xi-jiu-1988.html",
+      "sourceName": "Wine88 商品页",
+      "expectedRiskLevel": "低风险",
+      "expectedIdentity": "likely_authentic",
+      "labelSource": "web_authentic",
+      "labelStatus": "active"
+    },
+    {
+      "id": "external-wine88-xijiu-1988-1l",
+      "title": "外部样本-真品-习酒窖藏1988-1L",
+      "filePath": "data/evaluation/external-images/wine88-xijiu-1988-1l.jpg",
+      "sourceUrl": "https://wine88.com/en/xi-jiu/309-xi-jiu-jiao-cang-1988.html",
+      "sourceName": "Wine88 商品页",
+      "expectedRiskLevel": "低风险",
+      "expectedIdentity": "likely_authentic",
+      "labelSource": "web_authentic",
+      "labelStatus": "active"
+    },
+    {
+      "id": "external-lawyer-case-1",
+      "title": "外部样本-被控产品-律师资料-1",
+      "filePath": "public/case-images/xijiu-case-1.png",
+      "sourceUrl": "data/source/习酒典型侵权产品图片及判决.docx",
+      "sourceName": "律师资料：习酒典型侵权产品图片及判决",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_case",
+      "labelStatus": "active"
+    },
+    {
+      "id": "external-lawyer-case-2",
+      "title": "外部样本-被控产品-律师资料-2",
+      "filePath": "public/case-images/xijiu-case-2.png",
+      "sourceUrl": "data/source/习酒典型侵权产品图片及判决.docx",
+      "sourceName": "律师资料：习酒典型侵权产品图片及判决",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_case",
+      "labelStatus": "active"
+    },
+    {
+      "id": "external-lawyer-case-3",
+      "title": "外部样本-被控产品-律师资料-3",
+      "filePath": "public/case-images/xijiu-case-3.png",
+      "sourceUrl": "data/source/习酒典型侵权产品图片及判决.docx",
+      "sourceName": "律师资料：习酒典型侵权产品图片及判决",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_case",
+      "labelStatus": "active"
+    },
+    {
+      "id": "external-lawyer-case-4",
+      "title": "外部样本-被控产品-律师资料-4",
+      "filePath": "public/case-images/xijiu-case-4.png",
+      "sourceUrl": "data/source/习酒典型侵权产品图片及判决.docx",
+      "sourceName": "律师资料：习酒典型侵权产品图片及判决",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_case",
+      "labelStatus": "active"
+    }
+  ]
+}

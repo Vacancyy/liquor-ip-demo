@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "source": "用户反馈确认样本，用于本地学习和回归测试",
+  "samples": [
+    {
+      "id": "confirmed-picture1",
+      "title": "Picture1.png",
+      "imageSha256": "7c075b7828f061e6ea22ceab7f0524a483232750e1145a032045a165c76b3d90",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "confirmed_by_user",
+      "reason": "用户已明确反馈该样本应作为假冒/侵权高风险线索处理。"
+    },
+    {
+      "id": "confirmed-picture3",
+      "title": "Picture3.png",
+      "imageSha256": "f3a7839124c07335ea99042a96be1439a2d968b7bc4ad81c952ca2e201a383e3",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "confirmed_by_user",
+      "reason": "用户已明确反馈该样本应作为假冒/侵权高风险线索处理。"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-1",
+      "title": "律师Word图片样本-1",
+      "imageSha256": "a75c66985c52a7f832c251dc7a9f67d185cb62318bc747967a08d3ac67ef9af4",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "reason": "律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-2",
+      "title": "律师Word图片样本-2",
+      "imageSha256": "9a2ffe7e10cedd673b42b79b70e6b9b2a36f019bae89801a4a4bdbab78cea7ec",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "reason": "律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-3",
+      "title": "律师Word图片样本-3",
+      "imageSha256": "5c92423cab4533ae5e708f5447f4de33f3dfab95c13e3018bc3ee2904352b106",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "reason": "律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-4",
+      "title": "律师Word图片样本-4",
+      "imageSha256": "f351109aadd9ebbcf22117e7e2f23b72e947fb98e26243e466fda9a689184266",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "reason": "律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-5",
+      "title": "律师Word图片样本-5",
+      "imageSha256": "865f7f4bf081cd2b27a945a87a7bc66363d6aceb6aedae92a4141ea718a08146",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "reason": "律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-6",
+      "title": "律师Word图片样本-6",
+      "imageSha256": "00311fb43d2b19851eb8f89c10864229879012eb9475f233f1ad4b6e28303cc5",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "reason": "律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-7",
+      "title": "律师Word图片样本-7",
+      "imageSha256": "bf01d4eadd81164c26effb698c9f1310e2b68be906931abf950f02f8597987ac",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "reason": "律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-8",
+      "title": "律师Word图片样本-8",
+      "imageSha256": "b2fd3c1214b21d078ee3186e41a930452ed7966eca0a86e69d5428a5c37fcc5f",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "reason": "律师 Word 文档中表示侵权产品的确认样本，应作为高风险侵权样本处理。"
+    }
+  ]
+}

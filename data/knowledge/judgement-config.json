@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "source": "管理端研判策略配置。灵敏度、特异度、信度、效度是评测结果，不在此处手填；此处只配置影响研判结果的阈值和权重。",
+  "strategy": {
+    "mode": "balanced",
+    "name": "平衡模式",
+    "description": "兼顾侵权漏判和正品误判，适合常规演示和内部测试。",
+    "highRiskThreshold": 75,
+    "lowRiskMax": 29,
+    "embeddingSimilarityThreshold": 90,
+    "visualSimilarityThreshold": 88,
+    "visualAverageDistanceMax": 10,
+    "visualDifferenceDistanceMax": 12,
+    "authenticProtectionScore": -70,
+    "confirmedAuthenticScore": -80,
+    "confirmedAccusedScore": 90,
+    "confirmedAccusedVisualScore": 82,
+    "updatedAt": "2026-06-04T09:24:34.282Z"
+  },
+  "presets": [
+    {
+      "mode": "high_sensitivity",
+      "name": "高灵敏度模式",
+      "description": "更容易判为高风险，减少漏判侵权，但会增加正品误判和需复核比例。",
+      "highRiskThreshold": 68,
+      "lowRiskMax": 24,
+      "embeddingSimilarityThreshold": 86,
+      "visualSimilarityThreshold": 84,
+      "visualAverageDistanceMax": 13,
+      "visualDifferenceDistanceMax": 15,
+      "authenticProtectionScore": -55,
+      "confirmedAuthenticScore": -68,
+      "confirmedAccusedScore": 94,
+      "confirmedAccusedVisualScore": 88
+    },
+    {
+      "mode": "balanced",
+      "name": "平衡模式",
+      "description": "兼顾侵权漏判和正品误判，适合常规演示和内部测试。",
+      "highRiskThreshold": 75,
+      "lowRiskMax": 29,
+      "embeddingSimilarityThreshold": 90,
+      "visualSimilarityThreshold": 88,
+      "visualAverageDistanceMax": 10,
+      "visualDifferenceDistanceMax": 12,
+      "authenticProtectionScore": -70,
+      "confirmedAuthenticScore": -80,
+      "confirmedAccusedScore": 90,
+      "confirmedAccusedVisualScore": 82
+    },
+    {
+      "mode": "high_specificity",
+      "name": "高特异度模式",
+      "description": "更谨慎判高风险，降低正品误判，但可能漏掉边界侵权样本。",
+      "highRiskThreshold": 82,
+      "lowRiskMax": 34,
+      "embeddingSimilarityThreshold": 93,
+      "visualSimilarityThreshold": 91,
+      "visualAverageDistanceMax": 8,
+      "visualDifferenceDistanceMax": 10,
+      "authenticProtectionScore": -85,
+      "confirmedAuthenticScore": -92,
+      "confirmedAccusedScore": 86,
+      "confirmedAccusedVisualScore": 78
+    }
+  ],
+  "updatedAt": "2026-06-04T09:24:34.283Z"
+}

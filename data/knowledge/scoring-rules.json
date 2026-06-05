@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "source": "律师规则驱动风险评分模型",
+  "thresholds": {
+    "lowMax": 29,
+    "midMax": 74,
+    "highMin": 75
+  },
+  "rules": [
+    {
+      "id": "score-authentic-protection",
+      "label": "明确识别为权利人正品",
+      "score": -70
+    },
+    {
+      "id": "score-accused-product",
+      "label": "命中律师资料被控产品名称",
+      "score": 50
+    },
+    {
+      "id": "score-third-party-mark",
+      "label": "命中第三方疑似侵权标识",
+      "score": 35
+    },
+    {
+      "id": "score-court-factors-strong",
+      "label": "命中 4 个以上法院裁判外观要素",
+      "score": 25
+    },
+    {
+      "id": "score-court-factors-mid",
+      "label": "命中 2-3 个法院裁判外观要素",
+      "score": 15
+    },
+    {
+      "id": "score-source-context",
+      "label": "存在销售链接、店铺、价格或线索说明",
+      "score": 10
+    },
+    {
+      "id": "score-image-only",
+      "label": "只有图片、缺少销售场景",
+      "score": -10
+    }
+  ]
+}

@@ -1,0 +1,1400 @@
+{
+  "version": 3,
+  "source": "贵州习酒官网产品中心 SSR 数据",
+  "sourceUrl": "https://www.gzxijiu.com/product/mainProduct-junpin?menuId=Wds3VhamjqkrJ4TCRFJY5",
+  "description": "官网正品图片样本来源清单。构建脚本会把这些图片加入正品图片向量库，用于降低正品误判为侵权的风险。",
+  "scrapedAt": "2026-06-04T02:01:45.118Z",
+  "series": [
+    {
+      "id": "Wds3VhamjqkrJ4TCRFJY5",
+      "name": "君品系列",
+      "jumpUrl": "junpin",
+      "pageUrl": "https://www.gzxijiu.com/product/mainProduct-junpin?menuId=Wds3VhamjqkrJ4TCRFJY5"
+    },
+    {
+      "id": "52HqZJwHrszb9VKnICnLF",
+      "name": "窖藏系列",
+      "jumpUrl": "jiaocang",
+      "pageUrl": "https://www.gzxijiu.com/product/mainProduct-jiaocang?menuId=52HqZJwHrszb9VKnICnLF"
+    },
+    {
+      "id": "VzB2Cj6KjnJ6jUrbtW92W",
+      "name": "金钻系列",
+      "jumpUrl": "jinzuan",
+      "pageUrl": "https://www.gzxijiu.com/product/mainProduct-jinzuan?menuId=VzB2Cj6KjnJ6jUrbtW92W"
+    },
+    {
+      "id": "kXme9fHYCfnC4q89EnZET",
+      "name": "浓香系列",
+      "jumpUrl": "nongxiang",
+      "pageUrl": "https://www.gzxijiu.com/product/mainProduct-nongxiang?menuId=kXme9fHYCfnC4q89EnZET"
+    },
+    {
+      "id": "BpjVkLUYKt8X9tlXb7rr7",
+      "name": "知交系列",
+      "jumpUrl": "zjxl",
+      "pageUrl": "https://www.gzxijiu.com/product/mainProduct-zjxl?menuId=BpjVkLUYKt8X9tlXb7rr7"
+    },
+    {
+      "id": "30RXa8D71USdHAR7ZTKJ3",
+      "name": "封坛定制系列",
+      "jumpUrl": "fxdzxl",
+      "pageUrl": "https://www.gzxijiu.com/product/mainProduct-fxdzxl?menuId=30RXa8D71USdHAR7ZTKJ3"
+    },
+    {
+      "id": "JbQ61Ogs42ZBOa1s4LMbT",
+      "name": "电商专销系列",
+      "jumpUrl": "dszxxl",
+      "pageUrl": "https://www.gzxijiu.com/product/mainProduct-dszxxl?menuId=JbQ61Ogs42ZBOa1s4LMbT"
+    }
+  ],
+  "skippedSeries": [],
+  "sources": [
+    {
+      "id": "authentic-xijiu-official-dszxxl-1401-1988-2023-149292f4da",
+      "title": "习酒官网正品图-电商专销系列-窖藏1988礼盒（双瓶装2023）",
+      "productName": "窖藏1988礼盒（双瓶装2023）",
+      "officialProductId": "1401产品中心",
+      "officialSeriesId": "JbQ61Ogs42ZBOa1s4LMbT",
+      "officialSeriesName": "电商专销系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-dszxxl-1401-1988-2023-149292f4da.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231121/101855_d2a593d4-c53d-4fc2-a24c-8237fd2e9134.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231121/101858_dc138d0e-3b89-436c-a47e-9c3cafbe60f0.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=JbQ61Ogs42ZBOa1s4LMbT&id=1401%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-电商专销系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "电商专销系列",
+        "53%vol",
+        "500ml×2×3",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-dszxxl-1404-11467dbb23",
+      "title": "习酒官网正品图-电商专销系列-金质习酒礼盒（双瓶装）",
+      "productName": "金质习酒礼盒（双瓶装）",
+      "officialProductId": "1404产品中心",
+      "officialSeriesId": "JbQ61Ogs42ZBOa1s4LMbT",
+      "officialSeriesName": "电商专销系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-dszxxl-1404-11467dbb23.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231121/101439_4670c037-dcc8-46a8-9e02-9f38354fcdb5.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231121/101443_34326d1b-e567-48a1-8b7e-607d65b41976.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=JbQ61Ogs42ZBOa1s4LMbT&id=1404%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-电商专销系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "电商专销系列",
+        "53%vol",
+        "500ml×2×3",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-dszxxl-1403-a965b108f4",
+      "title": "习酒官网正品图-电商专销系列-金钻习酒礼盒（双瓶装）",
+      "productName": "金钻习酒礼盒（双瓶装）",
+      "officialProductId": "1403产品中心",
+      "officialSeriesId": "JbQ61Ogs42ZBOa1s4LMbT",
+      "officialSeriesName": "电商专销系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-dszxxl-1403-a965b108f4.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231121/101421_f8ec4339-d9b8-4427-9a70-da86d6678f53.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231121/101424_1f95f551-fae7-4732-aec9-4a81602432ff.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=JbQ61Ogs42ZBOa1s4LMbT&id=1403%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-电商专销系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "电商专销系列",
+        "53%vol",
+        "500ml×2×3",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-dszxxl-1400-8b5b669125",
+      "title": "习酒官网正品图-电商专销系列-君品习酒礼盒（双瓶装）",
+      "productName": "君品习酒礼盒（双瓶装）",
+      "officialProductId": "1400产品中心",
+      "officialSeriesId": "JbQ61Ogs42ZBOa1s4LMbT",
+      "officialSeriesName": "电商专销系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-dszxxl-1400-8b5b669125.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231121/093604_0972b785-420f-4b10-bf5f-a2b8620347eb.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231121/093608_11dc0fe9-422d-4d3b-bc3a-e5a06b6765fd.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=JbQ61Ogs42ZBOa1s4LMbT&id=1400%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-电商专销系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "电商专销系列",
+        "53%vol",
+        "500ml×2×3",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-dszxxl-1347-123-0479185d71",
+      "title": "习酒官网正品图-电商专销系列-习酒（习酒123干）白",
+      "productName": "习酒（习酒123干）白",
+      "officialProductId": "1347产品中心",
+      "officialSeriesId": "JbQ61Ogs42ZBOa1s4LMbT",
+      "officialSeriesName": "电商专销系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-dszxxl-1347-123-0479185d71.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20221225/194502_03b9e5b4-a03a-4fc3-88f8-660204ce20d0.png",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20221225/194505_d87f1e17-5166-4e27-960a-152464105d20.png",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=JbQ61Ogs42ZBOa1s4LMbT&id=1347%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-电商专销系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "电商专销系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-dszxxl-1346-123-c3f696929a",
+      "title": "习酒官网正品图-电商专销系列-习酒（习酒123干）蓝",
+      "productName": "习酒（习酒123干）蓝",
+      "officialProductId": "1346产品中心",
+      "officialSeriesId": "JbQ61Ogs42ZBOa1s4LMbT",
+      "officialSeriesName": "电商专销系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-dszxxl-1346-123-c3f696929a.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20221225/192945_a980f3e2-7ee5-48ee-a0a2-121e980900df.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20221225/192948_fbccffd5-1b9e-497f-a7a0-b85f8eaecf9d.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=JbQ61Ogs42ZBOa1s4LMbT&id=1346%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-电商专销系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "电商专销系列",
+        "53%vol",
+        "500ml×4",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-dszxxl-1348-bfb765a7a8",
+      "title": "习酒官网正品图-电商专销系列-习酒（习酒印象红）",
+      "productName": "习酒（习酒印象红）",
+      "officialProductId": "1348产品中心",
+      "officialSeriesId": "JbQ61Ogs42ZBOa1s4LMbT",
+      "officialSeriesName": "电商专销系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-dszxxl-1348-bfb765a7a8.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20221225/195131_ae39756f-edcb-477e-be6f-5c02a461832b.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20221225/195134_db48b986-836e-437d-8ff0-15ff553457e1.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=JbQ61Ogs42ZBOa1s4LMbT&id=1348%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-电商专销系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "电商专销系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-dszxxl-1453-123-4a95dcd90c",
+      "title": "习酒官网正品图-电商专销系列-习酒123干小酒",
+      "productName": "习酒123干小酒",
+      "officialProductId": "1453产品中心",
+      "officialSeriesId": "JbQ61Ogs42ZBOa1s4LMbT",
+      "officialSeriesName": "电商专销系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-dszxxl-1453-123-4a95dcd90c.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240710/170135_b5b0219b-3688-4543-974d-185025d3585c.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240710/170148_63fead9b-d6c1-4488-8f5f-cd378240ad6c.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=JbQ61Ogs42ZBOa1s4LMbT&id=1453%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-电商专销系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "电商专销系列",
+        "53%vol",
+        "100ml×24",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-dszxxl-1402-98-20507d53a3",
+      "title": "习酒官网正品图-电商专销系列-习酒感恩98礼盒（双瓶装）",
+      "productName": "习酒感恩98礼盒（双瓶装）",
+      "officialProductId": "1402产品中心",
+      "officialSeriesId": "JbQ61Ogs42ZBOa1s4LMbT",
+      "officialSeriesName": "电商专销系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-dszxxl-1402-98-20507d53a3.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231121/102606_553fe045-bcaa-482c-965c-5fc2d29e5458.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231121/102609_e7d8c560-ecd1-4ed8-a3b4-264b6aa7d7c3.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=JbQ61Ogs42ZBOa1s4LMbT&id=1402%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-电商专销系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "电商专销系列",
+        "53%vol",
+        "500ml×2×3",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-dszxxl-1405-493ea15752",
+      "title": "习酒官网正品图-电商专销系列-银质习酒礼盒（双瓶装）",
+      "productName": "银质习酒礼盒（双瓶装）",
+      "officialProductId": "1405产品中心",
+      "officialSeriesId": "JbQ61Ogs42ZBOa1s4LMbT",
+      "officialSeriesName": "电商专销系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-dszxxl-1405-493ea15752.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231121/101458_8f0b6756-af70-4539-97d5-47e80dffee30.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231121/101501_b9157e77-657e-439b-884d-fffb1df7be6f.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=JbQ61Ogs42ZBOa1s4LMbT&id=1405%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-电商专销系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "电商专销系列",
+        "53%vol",
+        "500ml×2×3",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-fxdzxl-1278-99d711ba94",
+      "title": "习酒官网正品图-封坛定制系列-习酒（典藏封坛）",
+      "productName": "习酒（典藏封坛）",
+      "officialProductId": "1278产品中心",
+      "officialSeriesId": "30RXa8D71USdHAR7ZTKJ3",
+      "officialSeriesName": "封坛定制系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-fxdzxl-1278-99d711ba94.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20220105/113315_1e318667-a24d-4d44-a223-593661fcccc2.png",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/24c8090c739c2d9c4b1ea031c8afd35b719dcda1aff51119011095679029ec26.png",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=30RXa8D71USdHAR7ZTKJ3&id=1278%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-封坛定制系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "封坛定制系列",
+        "53%vol",
+        "1500ml",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-jiaocang-1425-2021-f752e71ab8",
+      "title": "习酒官网正品图-窖藏系列-窖藏习酒（2021）",
+      "productName": "窖藏习酒（2021）",
+      "officialProductId": "1425产品中心",
+      "officialSeriesId": "52HqZJwHrszb9VKnICnLF",
+      "officialSeriesName": "窖藏系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-jiaocang-1425-2021-f752e71ab8.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231225/150649_7cebfc43-782b-4b30-9adf-a9b7fb547e63.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231225/150652_232d4017-8627-4ab8-9520-fcd64a1a22ff.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=52HqZJwHrszb9VKnICnLF&id=1425%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-窖藏系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "窖藏系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-jiaocang-1008-60d21fc13c",
+      "title": "习酒官网正品图-窖藏系列-习酒·典藏珍品",
+      "productName": "习酒·典藏珍品",
+      "officialProductId": "1008产品中心",
+      "officialSeriesId": "52HqZJwHrszb9VKnICnLF",
+      "officialSeriesName": "窖藏系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-jiaocang-1008-60d21fc13c.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/112847_41eaca19-2887-499e-9349-55bfc2260edb.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/112850_0b647314-74de-4b13-bba9-596253d59793.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=52HqZJwHrszb9VKnICnLF&id=1008%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-窖藏系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "窖藏系列",
+        "53%vol",
+        "3L×2",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-jiaocang-1159-1988-2020-fef1ef78c4",
+      "title": "习酒官网正品图-窖藏系列-习酒·窖藏1988（2020）",
+      "productName": "习酒·窖藏1988（2020）",
+      "officialProductId": "1159产品中心",
+      "officialSeriesId": "52HqZJwHrszb9VKnICnLF",
+      "officialSeriesName": "窖藏系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-jiaocang-1159-1988-2020-fef1ef78c4.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201028/161421_947b03bd-fbd3-45be-87a0-212a19b80767.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201028/161508_92ceadde-d1d0-4c8c-9f3a-cdfe85d949a0.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=52HqZJwHrszb9VKnICnLF&id=1159%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-窖藏系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "窖藏系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-jiaocang-1355-1988-4-47840f0f27",
+      "title": "习酒官网正品图-窖藏系列-习酒·窖藏1988（4盒装）",
+      "productName": "习酒·窖藏1988（4盒装）",
+      "officialProductId": "1355产品中心",
+      "officialSeriesId": "52HqZJwHrszb9VKnICnLF",
+      "officialSeriesName": "窖藏系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-jiaocang-1355-1988-4-47840f0f27.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20230317/093014_954d4664-6e3a-497e-ac0d-bb3306b2ebdc.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20230317/093020_81923c3b-b3c5-40aa-97c3-16f3eb42565d.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=52HqZJwHrszb9VKnICnLF&id=1355%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-窖藏系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "窖藏系列",
+        "53%vol",
+        "500ml×4",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-jiaocang-1160-1988-2020-7103aba786",
+      "title": "习酒官网正品图-窖藏系列-习酒·窖藏1988（雅致版2020）",
+      "productName": "习酒·窖藏1988（雅致版2020）",
+      "officialProductId": "1160产品中心",
+      "officialSeriesId": "52HqZJwHrszb9VKnICnLF",
+      "officialSeriesName": "窖藏系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-jiaocang-1160-1988-2020-7103aba786.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201028/161818_e54afd9e-e41f-40e7-a4e4-85b8e890d407.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201028/161821_5bd53150-14f3-4ca7-9dfc-c83ac0437877.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=52HqZJwHrszb9VKnICnLF&id=1160%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-窖藏系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "窖藏系列",
+        "53%vol",
+        "500ml×4",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-jiaocang-1356-98-9a72913d90",
+      "title": "习酒官网正品图-窖藏系列-习酒（习酒感恩98）",
+      "productName": "习酒（习酒感恩98）",
+      "officialProductId": "1356产品中心",
+      "officialSeriesId": "52HqZJwHrszb9VKnICnLF",
+      "officialSeriesName": "窖藏系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-jiaocang-1356-98-9a72913d90.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20230317/094544_9f8c7c8c-1a0e-48eb-aa32-471edfbe5ba8.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20230317/094548_d1a51f20-bf35-420e-b60c-bb2a7caff3df.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=52HqZJwHrszb9VKnICnLF&id=1356%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-窖藏系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "窖藏系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-jiaocang-1426-9dea31aa9b",
+      "title": "习酒官网正品图-窖藏系列-习酒（习酒喜宴）",
+      "productName": "习酒（习酒喜宴）",
+      "officialProductId": "1426产品中心",
+      "officialSeriesId": "52HqZJwHrszb9VKnICnLF",
+      "officialSeriesName": "窖藏系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-jiaocang-1426-9dea31aa9b.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231225/150847_d19803aa-6728-45ec-9b95-49808948dcd0.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231225/150850_7e0f3593-b788-48db-ba85-96d48a75dcb7.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=52HqZJwHrszb9VKnICnLF&id=1426%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-窖藏系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "窖藏系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-jinzuan-5-0977dc951a",
+      "title": "习酒官网正品图-金钻系列-金质习酒(第四代）",
+      "productName": "金质习酒(第四代）",
+      "officialProductId": "5产品中心",
+      "officialSeriesId": "VzB2Cj6KjnJ6jUrbtW92W",
+      "officialSeriesName": "金钻系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-jinzuan-5-0977dc951a.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/100611_c43307da-bbe3-44f4-957a-eaa607a35c21.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/8f131c0dd4edb358b70a60f4ec1742138cb2742508f93e871729ce5bd8a71298.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=VzB2Cj6KjnJ6jUrbtW92W&id=5%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-金钻系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "金钻系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-jinzuan-45-3a19bb5726",
+      "title": "习酒官网正品图-金钻系列-金钻习酒",
+      "productName": "金钻习酒",
+      "officialProductId": "45产品中心",
+      "officialSeriesId": "VzB2Cj6KjnJ6jUrbtW92W",
+      "officialSeriesName": "金钻系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-jinzuan-45-3a19bb5726.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/100040_a9e32133-6e7a-427c-874f-470b8b3ab0d3.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/8d1bc898960619c3af623fa6a1987f049b5a9afc2ec785857558c19ab15cbb57.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=VzB2Cj6KjnJ6jUrbtW92W&id=45%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-金钻系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "金钻系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-jinzuan-4-3b5d0369a2",
+      "title": "习酒官网正品图-金钻系列-经典习酒",
+      "productName": "经典习酒",
+      "officialProductId": "4产品中心",
+      "officialSeriesId": "VzB2Cj6KjnJ6jUrbtW92W",
+      "officialSeriesName": "金钻系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-jinzuan-4-3b5d0369a2.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/100458_be55b5ff-f75b-42d7-bda5-1072638edfe6.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/9d511fcfeff6198f2cd3b46177dd06419c0ee7245874ef9da2c2b65860542a63.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=VzB2Cj6KjnJ6jUrbtW92W&id=4%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-金钻系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "金钻系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-jinzuan-49-b52b1d573d",
+      "title": "习酒官网正品图-金钻系列-银质习酒·钻石版",
+      "productName": "银质习酒·钻石版",
+      "officialProductId": "49产品中心",
+      "officialSeriesId": "VzB2Cj6KjnJ6jUrbtW92W",
+      "officialSeriesName": "金钻系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-jinzuan-49-b52b1d573d.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/100724_c936ebf8-08e1-40d8-8ca4-5fc0e6a2884f.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/2f2b215d7cb0bf7574667bf04ee19aed2a0179e2204e6ecdfc4dc5bc414b054c.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=VzB2Cj6KjnJ6jUrbtW92W&id=49%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-金钻系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "金钻系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-jinzuan-7-9cffe59943",
+      "title": "习酒官网正品图-金钻系列-银质习酒（第三代）",
+      "productName": "银质习酒（第三代）",
+      "officialProductId": "7产品中心",
+      "officialSeriesId": "VzB2Cj6KjnJ6jUrbtW92W",
+      "officialSeriesName": "金钻系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-jinzuan-7-9cffe59943.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/100853_5fc4a06a-4c57-43bd-ba0a-f223a4ac73fb.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/255fc4557a50f0323abc1c8725fc220eda345ca0d7f6907f85ef7ed9d8623ec5.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=VzB2Cj6KjnJ6jUrbtW92W&id=7%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-金钻系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "金钻系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-jinzuan-1353-465f1c45b0",
+      "title": "习酒官网正品图-金钻系列-圆习酒",
+      "productName": "圆习酒",
+      "officialProductId": "1353产品中心",
+      "officialSeriesId": "VzB2Cj6KjnJ6jUrbtW92W",
+      "officialSeriesName": "金钻系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-jinzuan-1353-465f1c45b0.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20230306/160909_6fac56fd-d4f5-4368-96b4-1f723d1f0984.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20230306/160913_35a4cf4c-e4b0-4149-8ac9-c4237a108084.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=VzB2Cj6KjnJ6jUrbtW92W&id=1353%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-金钻系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "金钻系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-junpin-55-42784c9e8f",
+      "title": "习酒官网正品图-君品系列-君品习酒",
+      "productName": "君品习酒",
+      "officialProductId": "55产品中心",
+      "officialSeriesId": "Wds3VhamjqkrJ4TCRFJY5",
+      "officialSeriesName": "君品系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-junpin-55-42784c9e8f.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20220901/160004_321e7ab0-22cc-421a-9691-33dfa24a808e.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20220901/160009_82274822-565b-4f3f-9786-760e15733a49.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=Wds3VhamjqkrJ4TCRFJY5&id=55%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-君品系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "君品系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-junpin-1427-1abb143c8d",
+      "title": "习酒官网正品图-君品系列-君品习酒·崇礼",
+      "productName": "君品习酒·崇礼",
+      "officialProductId": "1427产品中心",
+      "officialSeriesId": "Wds3VhamjqkrJ4TCRFJY5",
+      "officialSeriesName": "君品系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-junpin-1427-1abb143c8d.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240122/085730_30cd28c2-e44a-4102-870d-4dd566763e98.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240122/085733_ba2f3e36-f2ba-4175-aaf4-990fc0548cfc.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=Wds3VhamjqkrJ4TCRFJY5&id=1427%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-君品系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "君品系列",
+        "53%vol",
+        "500ml×4",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-junpin-1394-b70e97267e",
+      "title": "习酒官网正品图-君品系列-君品习酒（传统文化巡游纪念酒）",
+      "productName": "君品习酒（传统文化巡游纪念酒）",
+      "officialProductId": "1394产品中心",
+      "officialSeriesId": "Wds3VhamjqkrJ4TCRFJY5",
+      "officialSeriesName": "君品系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-junpin-1394-b70e97267e.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/112901_a36f5943-f24b-4efc-92af-e8dfe82b0f41.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/112907_ad2a0b15-32c0-410b-966a-81d30b31fd4e.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=Wds3VhamjqkrJ4TCRFJY5&id=1394%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-君品系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "君品系列",
+        "53%vol",
+        "500ml×5",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-junpin-1393-e5299b2262",
+      "title": "习酒官网正品图-君品系列-君品习酒（精装）",
+      "productName": "君品习酒（精装）",
+      "officialProductId": "1393产品中心",
+      "officialSeriesId": "Wds3VhamjqkrJ4TCRFJY5",
+      "officialSeriesName": "君品系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-junpin-1393-e5299b2262.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/122749_47a02184-ebca-4a8e-a6af-5592f17c660a.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/122803_bca0d0db-8ac1-4365-ba71-dead71809b8e.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=Wds3VhamjqkrJ4TCRFJY5&id=1393%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-君品系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "君品系列",
+        "53%vol",
+        "500ml×4",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-junpin-1272-a4b0dd3df4",
+      "title": "习酒官网正品图-君品系列-习酒·百亿纪念酒",
+      "productName": "习酒·百亿纪念酒",
+      "officialProductId": "1272产品中心",
+      "officialSeriesId": "Wds3VhamjqkrJ4TCRFJY5",
+      "officialSeriesName": "君品系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-junpin-1272-a4b0dd3df4.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/123311_1e457977-1d73-4dd1-a2bf-5c63feb7e397.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/123316_19f21729-44b0-4811-b226-f16d9c5768da.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=Wds3VhamjqkrJ4TCRFJY5&id=1272%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-君品系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "君品系列",
+        "53%vol",
+        "500ml×2×3",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-junpin-1398-70-700ml-0e60888158",
+      "title": "习酒官网正品图-君品系列-习酒（创立70年纪念酒700ml）",
+      "productName": "习酒（创立70年纪念酒700ml）",
+      "officialProductId": "1398产品中心",
+      "officialSeriesId": "Wds3VhamjqkrJ4TCRFJY5",
+      "officialSeriesName": "君品系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-junpin-1398-70-700ml-0e60888158.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/122911_2833a1d8-8d91-4471-bfc4-e8f8ad8e2145.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/122916_136d572d-e1df-462d-89bd-cceeddcec203.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=Wds3VhamjqkrJ4TCRFJY5&id=1398%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-君品系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "君品系列",
+        "53%vol",
+        "700ml×4",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-junpin-1397-70-7l-f010134932",
+      "title": "习酒官网正品图-君品系列-习酒（创立70年纪念酒7L）",
+      "productName": "习酒（创立70年纪念酒7L）",
+      "officialProductId": "1397产品中心",
+      "officialSeriesId": "Wds3VhamjqkrJ4TCRFJY5",
+      "officialSeriesName": "君品系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-junpin-1397-70-7l-f010134932.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/122853_3c0dd2d1-144b-409c-b591-76ab597aa83d.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/122857_1a930e92-340b-4f8a-a23c-7da6b67d5ae4.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=Wds3VhamjqkrJ4TCRFJY5&id=1397%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-君品系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "君品系列",
+        "53%vol",
+        "7L×1",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-junpin-43-15-1fdf734b94",
+      "title": "习酒官网正品图-君品系列-习酒（窖藏15）",
+      "productName": "习酒（窖藏15）",
+      "officialProductId": "43产品中心",
+      "officialSeriesId": "Wds3VhamjqkrJ4TCRFJY5",
+      "officialSeriesName": "君品系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-junpin-43-15-1fdf734b94.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/122837_55527249-aafb-478a-92ac-d976450ae837.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/122841_fe0fbb31-3329-4828-9501-8513357991c0.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=Wds3VhamjqkrJ4TCRFJY5&id=43%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-君品系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "君品系列",
+        "53%vol",
+        "500ml×5",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-junpin-42-30-1917feb34d",
+      "title": "习酒官网正品图-君品系列-习酒（窖藏30）",
+      "productName": "习酒（窖藏30）",
+      "officialProductId": "42产品中心",
+      "officialSeriesId": "Wds3VhamjqkrJ4TCRFJY5",
+      "officialSeriesName": "君品系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-junpin-42-30-1917feb34d.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/122818_cd089ad9-1c39-43a5-b213-5fb0071a07fd.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/122823_24d2ef40-8a3e-471d-b52b-3eab71c53a2d.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=Wds3VhamjqkrJ4TCRFJY5&id=42%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-君品系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "君品系列",
+        "53%vol",
+        "500ml×5",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-junpin-1396-5adfed13d7",
+      "title": "习酒官网正品图-君品系列-习酒（境像东方）",
+      "productName": "习酒（境像东方）",
+      "officialProductId": "1396产品中心",
+      "officialSeriesId": "Wds3VhamjqkrJ4TCRFJY5",
+      "officialSeriesName": "君品系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-junpin-1396-5adfed13d7.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/101539_6d3825f8-52e8-4b54-a6bf-b556cd937afc.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/101545_d705c423-fc8f-4263-b86e-1f94cf65b35c.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=Wds3VhamjqkrJ4TCRFJY5&id=1396%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-君品系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "君品系列",
+        "53%vol",
+        "1.5L×2",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-junpin-1395-0b93785dfc",
+      "title": "习酒官网正品图-君品系列-习酒（境遇东方）",
+      "productName": "习酒（境遇东方）",
+      "officialProductId": "1395产品中心",
+      "officialSeriesId": "Wds3VhamjqkrJ4TCRFJY5",
+      "officialSeriesName": "君品系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-junpin-1395-0b93785dfc.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/095332_7f8d0d9a-bf97-4b6f-b26d-8efe193c7fff.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20231102/095337_901b8166-13ee-4c1c-ac36-af6519ffd479.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=Wds3VhamjqkrJ4TCRFJY5&id=1395%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-君品系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "君品系列",
+        "53%vol",
+        "1.5L×2",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-nongxiang-31-4d9dcf6622",
+      "title": "习酒官网正品图-浓香系列-习水·铂钻",
+      "productName": "习水·铂钻",
+      "officialProductId": "31产品中心",
+      "officialSeriesId": "kXme9fHYCfnC4q89EnZET",
+      "officialSeriesName": "浓香系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-nongxiang-31-4d9dcf6622.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/104335_a06c57f8-6bc2-4da5-af9c-0e7a6d0c2dec.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/104338_9cd03a1d-a83c-423d-8f87-3a593a353ee8.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=kXme9fHYCfnC4q89EnZET&id=31%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-浓香系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "浓香系列",
+        "42%vol ",
+        "500ml",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-nongxiang-30-316dc4b18d",
+      "title": "习酒官网正品图-浓香系列-习水·虹钻",
+      "productName": "习水·虹钻",
+      "officialProductId": "30产品中心",
+      "officialSeriesId": "kXme9fHYCfnC4q89EnZET",
+      "officialSeriesName": "浓香系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-nongxiang-30-316dc4b18d.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/104530_cf289dc7-395f-41e6-a9cc-bc2156682218.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/104533_2b21f983-aff8-45ff-9126-8de0ceecc51c.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=kXme9fHYCfnC4q89EnZET&id=30%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-浓香系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "浓香系列",
+        "42%vol \\ 52%vol",
+        "500ml",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-nongxiang-1004-b4bca8d288",
+      "title": "习酒官网正品图-浓香系列-习水·天辰",
+      "productName": "习水·天辰",
+      "officialProductId": "1004产品中心",
+      "officialSeriesId": "kXme9fHYCfnC4q89EnZET",
+      "officialSeriesName": "浓香系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-nongxiang-1004-b4bca8d288.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/103508_356e6a37-568d-46fa-9798-19d670fa597b.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/103510_6321e84c-99b0-434d-9be4-9d63fbcafee3.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=kXme9fHYCfnC4q89EnZET&id=1004%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-浓香系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "浓香系列",
+        "42%vol",
+        "500ml",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-nongxiang-1007-d631235152",
+      "title": "习酒官网正品图-浓香系列-习水大曲·经典",
+      "productName": "习水大曲·经典",
+      "officialProductId": "1007产品中心",
+      "officialSeriesId": "kXme9fHYCfnC4q89EnZET",
+      "officialSeriesName": "浓香系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-nongxiang-1007-d631235152.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/105220_f4d4b41c-5703-427c-9486-2b8e88b6cc56.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/105224_3b25f55f-d6e8-404b-b6b9-99994305a43e.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=kXme9fHYCfnC4q89EnZET&id=1007%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-浓香系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "浓香系列",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-nongxiang-1006-2d45a31c3b",
+      "title": "习酒官网正品图-浓香系列-习水大曲·老牌",
+      "productName": "习水大曲·老牌",
+      "officialProductId": "1006产品中心",
+      "officialSeriesId": "kXme9fHYCfnC4q89EnZET",
+      "officialSeriesName": "浓香系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-nongxiang-1006-2d45a31c3b.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/105044_8aa9f481-b0be-43d6-a24b-23baa0862d98.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/105047_20305841-2b02-41f7-b74e-5559e114face.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=kXme9fHYCfnC4q89EnZET&id=1006%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-浓香系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "浓香系列",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-nongxiang-1005-71ef472468",
+      "title": "习酒官网正品图-浓香系列-习水大曲·五星",
+      "productName": "习水大曲·五星",
+      "officialProductId": "1005产品中心",
+      "officialSeriesId": "kXme9fHYCfnC4q89EnZET",
+      "officialSeriesName": "浓香系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-nongxiang-1005-71ef472468.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/104836_eb132d6e-c62d-4943-8381-fb7a0ee120b9.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/104839_10ca4023-39e4-4795-a48e-49259dba5d9b.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=kXme9fHYCfnC4q89EnZET&id=1005%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-浓香系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "浓香系列",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-nongxiang-32-10-e39fe08e42",
+      "title": "习酒官网正品图-浓香系列-习水天辰·辰10",
+      "productName": "习水天辰·辰10",
+      "officialProductId": "32产品中心",
+      "officialSeriesId": "kXme9fHYCfnC4q89EnZET",
+      "officialSeriesName": "浓香系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-nongxiang-32-10-e39fe08e42.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/103136_2adf6f4a-b975-4c59-80de-d2ed9a375a93.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20201015/103139_a6237e57-25fe-4ffb-bee6-8bb5a7130fcf.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=kXme9fHYCfnC4q89EnZET&id=32%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-浓香系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "浓香系列",
+        " 52%vol",
+        "500ml",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-nongxiang-1277-6-6b4baf2857",
+      "title": "习酒官网正品图-浓香系列-习水天辰·辰6",
+      "productName": "习水天辰·辰6",
+      "officialProductId": "1277产品中心",
+      "officialSeriesId": "kXme9fHYCfnC4q89EnZET",
+      "officialSeriesName": "浓香系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-nongxiang-1277-6-6b4baf2857.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20220105/112950_78b7ce61-6f8c-4375-ab91-b9b4139b673b.png",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20220105/112954_8d957b52-b832-43d1-af0a-c43cacea9b7e.png",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=kXme9fHYCfnC4q89EnZET&id=1277%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-浓香系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "浓香系列",
+        "52%vol",
+        "500ml",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-nongxiang-1273-f789d15117",
+      "title": "习酒官网正品图-浓香系列-优质习水大曲",
+      "productName": "优质习水大曲",
+      "officialProductId": "1273产品中心",
+      "officialSeriesId": "kXme9fHYCfnC4q89EnZET",
+      "officialSeriesName": "浓香系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-nongxiang-1273-f789d15117.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20211201/111657_7d4d27a9-c664-48ba-9df3-44222a1d19dd.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20211201/111703_555f3ab7-ca9e-4572-831e-9f091dbe391f.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=kXme9fHYCfnC4q89EnZET&id=1273%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-浓香系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "浓香系列",
+        "52%vol",
+        "500ml×12",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-zjxl-1444-d02150f655",
+      "title": "习酒官网正品图-知交系列-知交酒（遇知交）",
+      "productName": "知交酒（遇知交）",
+      "officialProductId": "1444产品中心",
+      "officialSeriesId": "BpjVkLUYKt8X9tlXb7rr7",
+      "officialSeriesName": "知交系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-zjxl-1444-d02150f655.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240710/163627_9df1b851-ee5b-46e2-ab98-417f48de9c91.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/57b934866141e7c05e5c322fbefdf8be24f267f5ed54670859895bb10a88ea66.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=BpjVkLUYKt8X9tlXb7rr7&id=1444%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-知交系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "知交系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-zjxl-1445-1fea86e37c",
+      "title": "习酒官网正品图-知交系列-知交酒（知交龙年）",
+      "productName": "知交酒（知交龙年）",
+      "officialProductId": "1445产品中心",
+      "officialSeriesId": "BpjVkLUYKt8X9tlXb7rr7",
+      "officialSeriesName": "知交系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-zjxl-1445-1fea86e37c.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240710/164124_ebf3b353-03fe-4862-8fa1-32a4426be405.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240710/164127_cc60273f-0524-4a03-92c4-491bd1fb6c6b.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=BpjVkLUYKt8X9tlXb7rr7&id=1445%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-知交系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "知交系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-zjxl-1443-9ad5a9adad",
+      "title": "习酒官网正品图-知交系列-知交酒（知交四季）",
+      "productName": "知交酒（知交四季）",
+      "officialProductId": "1443产品中心",
+      "officialSeriesId": "BpjVkLUYKt8X9tlXb7rr7",
+      "officialSeriesName": "知交系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-zjxl-1443-9ad5a9adad.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240710/163542_681183a0-1665-4201-a080-30f26eadc7ed.png",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/dfb1855c103a89e61ec79e013b779d2af3e76fc8a83d073265680ba9f8c2d1f5.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=BpjVkLUYKt8X9tlXb7rr7&id=1443%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-知交系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "知交系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-zjxl-1446-f349ce6ddb",
+      "title": "习酒官网正品图-知交系列-知交酒（知交小酒）",
+      "productName": "知交酒（知交小酒）",
+      "officialProductId": "1446产品中心",
+      "officialSeriesId": "BpjVkLUYKt8X9tlXb7rr7",
+      "officialSeriesName": "知交系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-zjxl-1446-f349ce6ddb.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240710/164312_daf7a7d3-512a-4598-9668-0dd4ead5a03a.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240710/164316_70aff48c-6969-49df-a017-b200a92c172a.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=BpjVkLUYKt8X9tlXb7rr7&id=1446%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-知交系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "知交系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-zjxl-1442-caed1a0ae0",
+      "title": "习酒官网正品图-知交系列-知交酒（知行礼）",
+      "productName": "知交酒（知行礼）",
+      "officialProductId": "1442产品中心",
+      "officialSeriesId": "BpjVkLUYKt8X9tlXb7rr7",
+      "officialSeriesName": "知交系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-zjxl-1442-caed1a0ae0.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240710/163002_9687b7de-503b-4fc4-ad8b-c024f7408cdb.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240710/163004_397a84aa-518c-401e-a56d-30ceabe61ccf.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=BpjVkLUYKt8X9tlXb7rr7&id=1442%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-知交系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "知交系列",
+        "53%vol",
+        "500ml×6",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-zjxl-1448-d3396c8260",
+      "title": "习酒官网正品图-知交系列-知交酒（知行礼云喜）",
+      "productName": "知交酒（知行礼云喜）",
+      "officialProductId": "1448产品中心",
+      "officialSeriesId": "BpjVkLUYKt8X9tlXb7rr7",
+      "officialSeriesName": "知交系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-zjxl-1448-d3396c8260.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240710/164815_ea858539-4968-4a36-8c5c-e79a3c0d9ece.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240710/164817_ca0b5277-101d-4879-805c-6ebd7c3f4b93.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=BpjVkLUYKt8X9tlXb7rr7&id=1448%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-知交系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "知交系列",
+        "53%vol",
+        "500ml×2×3",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-zjxl-1441-151c746f73",
+      "title": "习酒官网正品图-知交系列-知交酒（知行义）",
+      "productName": "知交酒（知行义）",
+      "officialProductId": "1441产品中心",
+      "officialSeriesId": "BpjVkLUYKt8X9tlXb7rr7",
+      "officialSeriesName": "知交系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-zjxl-1441-151c746f73.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240710/085930_156c4fbb-183c-49a9-9ef9-d4619d7f953f.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240710/085933_9cff8bda-83f9-4d9e-ab4a-a1048c6e8795.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=BpjVkLUYKt8X9tlXb7rr7&id=1441%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-知交系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "知交系列",
+        "53%vol",
+        "500ml×6、680ml×4",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    },
+    {
+      "id": "authentic-xijiu-official-zjxl-1447-320f697a13",
+      "title": "习酒官网正品图-知交系列-知交酒（知行义）礼盒",
+      "productName": "知交酒（知行义）礼盒",
+      "officialProductId": "1447产品中心",
+      "officialSeriesId": "BpjVkLUYKt8X9tlXb7rr7",
+      "officialSeriesName": "知交系列",
+      "filePath": "data/knowledge/authentic-images/authentic-xijiu-official-zjxl-1447-320f697a13.jpg",
+      "imageUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240710/164638_45c9e992-915c-46d1-88fe-5a5ed41519c8.jpg",
+      "thumbnailUrl": "https://static-ow.gzxijiu.com/UploadFile/UPLOADS/image/20240710/164641_1f042153-e6d0-4e5e-8d33-d89b04ab3cfa.jpg",
+      "sourceUrl": "https://www.gzxijiu.com/product/detail?menuId=BpjVkLUYKt8X9tlXb7rr7&id=1447%E4%BA%A7%E5%93%81%E4%B8%AD%E5%BF%83",
+      "sourceName": "贵州习酒官网产品中心-知交系列",
+      "labelSource": "official_website",
+      "structuredTags": [
+        "官网正品",
+        "知交系列",
+        "53%vol",
+        "500ml×2×3",
+        "贵州习酒"
+      ],
+      "visualFactors": [
+        "习酒标识",
+        "正品酒瓶",
+        "正品酒盒"
+      ]
+    }
+  ]
+}

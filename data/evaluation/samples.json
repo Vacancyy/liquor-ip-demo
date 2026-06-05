@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "description": "第二步研判系统评测样本。labelSource=confirmed_by_user 表示用户已明确反馈；filename_seed 表示依据文件名中的真品/假冒标注建立的初始测试标签，后续应由律师复核。",
+  "samples": [
+    {
+      "id": "lead-1779947741366",
+      "title": "Picture1.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "confirmed_by_user",
+      "labelStatus": "active"
+    },
+    {
+      "id": "lead-1779938456207",
+      "title": "Picture3.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "confirmed_by_user",
+      "labelStatus": "active"
+    },
+    {
+      "id": "lead-1779955421258",
+      "title": "假1.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "filename_seed",
+      "labelStatus": "active"
+    },
+    {
+      "id": "lead-1779948241853",
+      "title": "假2.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "filename_seed",
+      "labelStatus": "active"
+    },
+    {
+      "id": "lead-1779955306575",
+      "title": "真品4.jpeg",
+      "expectedRiskLevel": "低风险",
+      "expectedIdentity": "likely_authentic",
+      "labelSource": "filename_seed",
+      "labelStatus": "active"
+    },
+    {
+      "id": "lead-1779947847212",
+      "title": "真品3.png",
+      "expectedRiskLevel": "低风险",
+      "expectedIdentity": "likely_authentic",
+      "labelSource": "filename_seed",
+      "labelStatus": "active"
+    },
+    {
+      "id": "lead-1779947497255",
+      "title": "真品2.jpeg",
+      "expectedRiskLevel": "低风险",
+      "expectedIdentity": "likely_authentic",
+      "labelSource": "filename_seed",
+      "labelStatus": "active"
+    },
+    {
+      "id": "lead-1779947202558",
+      "title": "真品.jpeg",
+      "expectedRiskLevel": "低风险",
+      "expectedIdentity": "likely_authentic",
+      "labelSource": "filename_seed",
+      "labelStatus": "active"
+    }
+  ]
+}

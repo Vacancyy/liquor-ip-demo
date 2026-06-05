@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-03T01:18:17.993Z",
+  "source": "data/source/习酒典型侵权产品图片及判决.docx",
+  "sourceSummary": {
+    "title": "习酒典型侵权产品权利基础+侵权产品+法院判决",
+    "textLineCount": 209,
+    "caseRowCount": 64,
+    "embeddedImageCount": 137,
+    "ocrImageCount": 137,
+    "ocrErrorCount": 0
+  },
+  "protectedElements": [
+    {
+      "id": "doc-element-round-bottle",
+      "name": "圆形/圆鼓状瓶体",
+      "category": "bottle_shape",
+      "aliases": [
+        "圆形瓶体",
+        "圆鼓状",
+        "圆形酒瓶",
+        "瓶体圆形",
+        "圆圈形瓶"
+      ],
+      "legalRole": "立体商标和包装装潢整体近似的核心识别要素。",
+      "strength": "core",
+      "docFrequency": 19
+    },
+    {
+      "id": "doc-element-trapezoid-base",
+      "name": "梯形/鼓式底座",
+      "category": "bottle_shape",
+      "aliases": [
+        "梯形底座",
+        "底座形状",
+        "鼓式底座",
+        "鼓架式底座",
+        "瓶底"
+      ],
+      "legalRole": "与瓶体、瓶颈共同构成立体形状近似。",
+      "strength": "core",
+      "docFrequency": 26
+    },
+    {
+      "id": "doc-element-long-neck",
+      "name": "细长瓶颈/圆柱形瓶颈",
+      "category": "bottle_shape",
+      "aliases": [
+        "细长瓶颈",
+        "细长型",
+        "圆柱形瓶颈",
+        "瓶颈部分",
+        "瓶颈"
+      ],
+      "legalRole": "用于判断整体瓶型结构是否接近。",
+      "strength": "core",
+      "docFrequency": 43
+    },
+    {
+      "id": "doc-element-gold-rings",
+      "name": "多层金色环圈",
+      "category": "decoration",
+      "aliases": [
+        "多层金色环圈",
+        "金色环圈",
+        "多层黄色细螺纹",
+        "金黄色环绕",
+        "金色装饰"
+      ],
+      "legalRole": "瓶颈/瓶身装饰细节，律师资料多次作为近似判断要素。",
+      "strength": "core",
+      "docFrequency": 18
+    },
+    {
+      "id": "doc-element-raised-lines",
+      "name": "两侧凸起装饰线条",
+      "category": "decoration",
+      "aliases": [
+        "凸起状装饰线条",
+        "两侧凸起",
+        "左右两侧",
+        "凸起部分",
+        "装饰线条"
+      ],
+      "legalRole": "判词中反复出现的装饰近似要素，颜色或文字不同也可能不排除。",
+      "strength": "core",
+      "docFrequency": 32
+    },
+    {
+      "id": "doc-element-box-trade-dress",
+      "name": "酒盒/包装装潢整体近似",
+      "category": "box_layout",
+      "aliases": [
+        "酒盒",
+        "包装装潢",
+        "商品包装",
+        "整体结构",
+        "整体布局",
+        "图形构图",
+        "视觉效果"
+      ],
+      "legalRole": "反不正当竞争法下有一定影响包装装潢的主要判断对象。",
+      "strength": "core",
+      "docFrequency": 135
+    },
+    {
+      "id": "doc-element-main-label",
+      "name": "正面主标/竖向品名/圆形图案",
+      "category": "label_layout",
+      "aliases": [
+        "正面汉字",
+        "竖向品名",
+        "圆形图案",
+        "瓶贴",
+        "主要文字",
+        "中部圆形装饰"
+      ],
+      "legalRole": "用于整体比对和主要部分比对，不能孤立替代整体结构判断。",
+      "strength": "supporting",
+      "docFrequency": 23
+    },
+    {
+      "id": "doc-element-color-combination",
+      "name": "颜色组合/色系近似",
+      "category": "color",
+      "aliases": [
+        "颜色组合",
+        "整体色系",
+        "瓶身颜色",
+        "色差",
+        "颜色高度近似"
+      ],
+      "legalRole": "颜色差异或近似均需结合整体结构判断。",
+      "strength": "supporting",
+      "docFrequency": 23
+    }
+  ],
+  "legalReasoningRules": [
+    {
+      "id": "doc-rule-confusion-source",
+      "label": "混淆、误认或特定联系",
+      "type": "confusion",
+      "patterns": [
+        "混淆",
+        "误认",
+        "特定联系",
+        "关联"
+      ],
+      "score": 12,
+      "legalMeaning": "判词反复以相关公众混淆、误认或认为与权利人存在特定联系作为近似判断结果。",
+      "examples": [
+        "被控侵权产品为白酒，与第6018549号、第11218168似的商标，容易导致混淆的",
+        "同，容易使相关公众产生混淆，误以为被控侵权产品与第",
+        "11218168号注册商标权利人具有某种关联",
+        "体形状、颜色组合近似，易使相关公众对商品的来源产生误认或",
+        "度和所获得的声誉，容易导致公众混淆，故浏阳河酒厂、浏阳河",
+        "凸起状装饰线条均一致，容易使相关公众产生混淆，误以为被控"
+      ]
+    },
+    {
+      "id": "doc-rule-overall-comparison",
+      "label": "整体比对 + 主要部分比对",
+      "type": "comparison_method",
+      "patterns": [
+        "整体造型",
+        "整体结构",
+        "整体视觉效果",
+        "主要部分",
+        "隔离状态"
+      ],
+      "score": 10,
+      "legalMeaning": "不能只看单个文字或颜色，应结合整体结构、主要部分和一般消费者注意力判断。",
+      "examples": [
+        "的构图及颜色，或者其各要素组合后的整体结构相似，或者其立",
+        "样，故二者之间在整体造型、瓶身、底座形状，以及左右两侧的",
+        "{\"rotate_rect\": [498, 950, 980, 79, 0], \"text\": \"位置、元素组成效果、整体结构和视觉效果都较为近似",
+        "综上，二者在立体形构、整体结构及图形构图上近\"",
+        "在标识要素及整体结构上近似，图形构图上相似，易使相关公众对商品的来源产生误认或者认为其来源与习酒公司涉案第11218168号商标、第6018549号商标的商品有特定的联系，二者构成近似",
+        "综上，二者在瓶身颜色、立体形状、整体结构及图形构图上近似，易使相关公众对商品的来源产生误认或者认为其来源与习酒公司涉案第11218168号、第27250465号和第6018549号注册商标的商品有特定的联系，二者构成近似"
+      ]
+    },
+    {
+      "id": "doc-rule-differences-not-exclusion",
+      "label": "颜色/文字差异不当然排除",
+      "type": "difference_not_exclusion",
+      "patterns": [
+        "颜色不同",
+        "汉字不同",
+        "色差",
+        "略有不同",
+        "细微差异",
+        "不当然排除"
+      ],
+      "score": 10,
+      "legalMeaning": "瓶身颜色、正面汉字、局部文字不同，不当然排除整体近似或混淆风险。",
+      "examples": [
+        "就第11218168号注册商标而言，该商标系立体商标，被诉侵权商品外观虽然与涉案注册商标有色差，但整体色系相同，在注册商标所包含的要素中也仅中部圆形装饰的文字及其上、下部分文字略有不同，因此二者整体近似，被诉侵权商品侵害了习酒公司第9000971号注册商标专用权",
+        "<td>水窖藏20”装潢与“习酒窖藏1988”的装潢也仅有细微差异",
+        "<td>近似颜色不同的情况下，仍然在被控权产品上使用立体标识统</td>",
+        "\\n\\n杏花酒业公司辩称被诉侵权产品1与案涉商标3的指定颜色不同，与两枚商标的图文等平面要素不近似",
+        "\\n\\n关于颜色，本院认为，案涉商标3是由颜色、立体图形、平面图文等可识别的特征构成的整体，其指定的颜色是一部分注册商标类别特征而非全部，该注册商标专用权并非仅保护颜色而不保护其他识别特征，故颜色不同不影响其构成近似",
+        "瓶身颜色、正面汉字不同，不当然排除混淆风险，应结合整体造型、瓶身、底座和装饰线条判断"
+      ]
+    },
+    {
+      "id": "doc-rule-famous-trade-dress",
+      "label": "有一定影响包装装潢/知名度",
+      "type": "trade_dress_fame",
+      "patterns": [
+        "有一定影响",
+        "知名",
+        "长期使用",
+        "广泛宣传",
+        "显著性"
+      ],
+      "score": 10,
+      "legalMeaning": "律师资料强调窖藏1988等产品经长期使用宣传形成有一定影响的包装装潢和显著性。",
+      "examples": [
+        "窖藏1988被认定为知名商品",
+        "其酒瓶、酒盒及其包装装潢被认定为有一定影响的包装、装潢",
+        "①窖藏1988-酒瓶、酒盒为有一定影响的包装、装潢",
+        "窖藏1988酒瓶、酒盒及其包装装潢被认定为有一定影响的包装、装潢",
+        "窖藏1988-酒瓶为有一定影响的包装、装潢",
+        "11218168号商标+有一定影响的包装装潢（酒盒、酒瓶）"
+      ]
+    },
+    {
+      "id": "doc-rule-third-party-producer",
+      "label": "第三方生产/销售主体",
+      "type": "source_subject",
+      "patterns": [
+        "生产",
+        "销售",
+        "联合出品",
+        "运营",
+        "生产者",
+        "销售者",
+        "未经许可"
+      ],
+      "score": 12,
+      "legalMeaning": "出现第三方生产、销售、运营或未经许可使用时，才更接近侵权线索而非正品样式本身。",
+      "examples": [
+        "11218168号权利商标相近似，结合习酒公司所生产产品的知名",
+        "习窖公司生产的“贵州习水大曲”白酒包</td>",
+        "习窖公司生产的“贵州习</td>",
+        "\"text\": \"售和持续性宣传，已经成为消费者区别习酒公司生产的商品与其\"",
+        "且双方同属白酒行业经营者，被控侵权人对于习酒公司及其产品在业界的知名度及影响力应当有所知晓，但仿故意使用相近似的标识对其知名度和该商品名称的特有性，在被控侵权人不能证明被控侵权产品的知名度、影响力高于习酒公司产品知名度、影响力的情况下，使用与该公司有一定影响的“窖藏1988”商品名称相近似的标识进行生产、销售，易使相关消费者误认为被控侵权产品与原告存在特定联系并构成混淆，其行为构成不正当竞争",
+        "<td>品来源，并，认为其为同一商标人生产的不同型号产品，故认</td>"
+      ]
+    },
+    {
+      "id": "doc-rule-same-goods-liquor",
+      "label": "同类白酒商品",
+      "type": "goods_similarity",
+      "patterns": [
+        "白酒",
+        "同一种商品",
+        "同类产品",
+        "类似商品"
+      ],
+      "score": 8,
+      "legalMeaning": "被控对象同为白酒或类似商品时，商标/包装装潢近似的混淆风险更高。",
+      "examples": [
+        "被控侵权产品为白酒，与第6018549号、第11218168似的商标，容易导致混淆的",
+        "习窖公司生产的“贵州习水大曲”白酒包</td>",
+        "<td>装、装潢与习酒公司的“习水大曲”白酒包装、装潢相比，二者</td>",
+        "\"text\": \"具有独特性，明显区别于其他同类产品",
+        "<td>这一年，“一季”依旧稳居国内知名白酒前列位置，展现出强劲的生命活力及广阔发展前景",
+        "……”之规定，二者经营的商品均属同一类别白酒，被控侵权人使用了“窖藏1988”标识，具有相同附习酒公司案涉注册商标的主观意图，而“窖藏1988”是习酒公司该款产品的专属标识，尤其是被控侵权人在其商品上所使用的标识与习酒公司未注册的商标较为近似，并不因为文字的组合、字体和颜色的差异而具有明显区别，足以使相关消费者误认为系与习酒公司相关联的产品或者与该款商品存在特定联系，容易造成混淆"
+      ]
+    }
+  ],
+  "evidenceCombinations": [
+    {
+      "id": "doc-combo-third-party-core-elements",
+      "label": "第三方主体 + 2 个以上核心包装要素",
+      "condition": "third_party_and_two_core_elements",
+      "score": 32,
+      "riskBand": "high",
+      "legalMeaning": "第三方主体或被控标识与核心瓶型/包装装潢组合同时出现，是律师资料中最稳定的高风险组合。"
+    },
+    {
+      "id": "doc-combo-four-core-elements",
+      "label": "4 个以上核心包装要素",
+      "condition": "four_core_elements",
+      "score": 24,
+      "riskBand": "high",
+      "legalMeaning": "圆形瓶体、梯形底座、细长瓶颈、金色环圈、凸起线条、酒盒装潢等核心要素高度集中时，整体近似风险显著。"
+    },
+    {
+      "id": "doc-combo-difference-still-risk",
+      "label": "存在局部差异但核心结构近似",
+      "condition": "differences_with_core_elements",
+      "score": 16,
+      "riskBand": "mid_high",
+      "legalMeaning": "即使颜色、正面汉字或局部文字不同，只要核心结构组合接近，仍需要提高复核等级。"
+    },
+    {
+      "id": "doc-combo-official-no-third-party",
+      "label": "官方/正品信号且无第三方主体",
+      "condition": "official_without_third_party",
+      "score": -35,
+      "riskBand": "low",
+      "legalMeaning": "正品、官网或授权渠道信号明确，且无第三方主体时，应优先排除高风险误判。"
+    }
+  ],
+  "extractedStats": {
+    "protectedElementCount": 8,
+    "legalReasoningRuleCount": 6,
+    "evidenceCombinationCount": 4,
+    "courtReasonCount": 120,
+    "ocrRowCount": 137
+  }
+}

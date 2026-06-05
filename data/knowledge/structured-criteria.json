@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "source": "律师判断标准结构化：第二步图片研判",
+  "criteria": [
+    {
+      "id": "criterion-official-authentic-exclusion",
+      "type": "exclusion",
+      "label": "官方/正品信号排除",
+      "condition": "official_signals_without_third_party",
+      "score": -35,
+      "legalMeaning": "图片显示权利人正品、官网、授权渠道或官方产品样式，且没有第三方主体或被控标识时，不应仅因命中习酒包装要素就判高风险。"
+    },
+    {
+      "id": "criterion-third-party-source",
+      "type": "source",
+      "label": "第三方来源或主体",
+      "condition": "third_party_signals_present",
+      "score": 20,
+      "legalMeaning": "出现非权利人的生产方、运营方、联合出品方、商标或商品名称，是进入侵权风险判断的关键前提。"
+    },
+    {
+      "id": "criterion-protected-shape-mid",
+      "type": "trade_dress",
+      "label": "命中多个受保护瓶型/包装要素",
+      "condition": "protected_elements_at_least_2",
+      "score": 12,
+      "legalMeaning": "圆形瓶体、梯形底座、细长瓶颈、多层金色环圈、凸起装饰线条、酒盒装潢等要素组合出现时，需要进行整体近似判断。"
+    },
+    {
+      "id": "criterion-protected-shape-strong",
+      "type": "trade_dress",
+      "label": "命中高强度受保护包装组合",
+      "condition": "protected_elements_at_least_4",
+      "score": 22,
+      "legalMeaning": "命中四个以上核心瓶型/包装装潢要素时，通常说明整体视觉结构已经接近律师资料中的重点比对对象。"
+    },
+    {
+      "id": "criterion-third-party-protected-combo",
+      "type": "combo",
+      "label": "第三方主体叠加受保护包装要素",
+      "condition": "third_party_and_protected_elements",
+      "score": 30,
+      "legalMeaning": "第三方主体或异常标识与权利产品包装装潢组合同时出现，是高风险研判的核心组合。"
+    },
+    {
+      "id": "criterion-confusion-reasoning",
+      "type": "legal_reasoning",
+      "label": "混淆/误认/特定联系理由",
+      "condition": "confusion_reasoning_terms",
+      "patterns": ["混淆", "误认", "特定联系", "整体近似", "视觉效果", "搭便车", "攀附"],
+      "score": 12,
+      "legalMeaning": "律师资料和判词反复强调相关公众混淆、误认或认为存在特定联系，是商标近似和不正当竞争判断的核心理由。"
+    },
+    {
+      "id": "criterion-lawyer-confirmed-accused-image",
+      "type": "sample",
+      "label": "命中律师确认侵权图片库",
+      "condition": "image_vector_accused_match",
+      "score": 0,
+      "legalMeaning": "图片命中律师 Word 中确认的侵权样本或其向量近似样本，应作为强证据，但具体分值由图片样本规则单独控制。"
+    },
+    {
+      "id": "criterion-official-authentic-image",
+      "type": "sample",
+      "label": "命中正品图片库",
+      "condition": "image_vector_authentic_match",
+      "score": 0,
+      "legalMeaning": "图片命中官网或授权渠道正品样本，应优先作为正品保护证据，但仍需检查是否存在第三方来源或异常销售场景。"
+    }
+  ]
+}

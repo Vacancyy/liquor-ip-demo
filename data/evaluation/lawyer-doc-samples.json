@@ -1,0 +1,537 @@
+{
+  "version": 2,
+  "description": "来自律师 Word 文档内嵌图片的产品图评测集。expectedRiskLevel 只用于评测脚本，不会传给研判接口。",
+  "sourceDocument": "data/source/习酒典型侵权产品图片及判决.docx",
+  "samples": [
+    {
+      "id": "lawyer-doc-ocr-image-1",
+      "title": "律师Word图片样本-1",
+      "filePath": "data/extracted/docx-images/image1.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-2",
+      "title": "律师Word图片样本-2",
+      "filePath": "data/extracted/docx-images/image2.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-3",
+      "title": "律师Word图片样本-3",
+      "filePath": "data/extracted/docx-images/image3.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-4",
+      "title": "律师Word图片样本-4",
+      "filePath": "data/extracted/docx-images/image4.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-5",
+      "title": "律师Word图片样本-5",
+      "filePath": "data/extracted/docx-images/image5.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-6",
+      "title": "律师Word图片样本-6",
+      "filePath": "data/extracted/docx-images/image6.jpeg",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-7",
+      "title": "律师Word图片样本-7",
+      "filePath": "data/extracted/docx-images/image7.jpeg",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-8",
+      "title": "律师Word图片样本-8",
+      "filePath": "data/extracted/docx-images/image8.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-11",
+      "title": "律师Word图片样本-11",
+      "filePath": "data/extracted/docx-images/image11.jpeg",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-16",
+      "title": "律师Word图片样本-16",
+      "filePath": "data/extracted/docx-images/image16.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-18",
+      "title": "律师Word图片样本-18",
+      "filePath": "data/extracted/docx-images/image18.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-19",
+      "title": "律师Word图片样本-19",
+      "filePath": "data/extracted/docx-images/image19.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-20",
+      "title": "律师Word图片样本-20",
+      "filePath": "data/extracted/docx-images/image20.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-21",
+      "title": "律师Word图片样本-21",
+      "filePath": "data/extracted/docx-images/image21.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-22",
+      "title": "律师Word图片样本-22",
+      "filePath": "data/extracted/docx-images/image22.jpeg",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-28",
+      "title": "律师Word图片样本-28",
+      "filePath": "data/extracted/docx-images/image28.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-31",
+      "title": "律师Word图片样本-31",
+      "filePath": "data/extracted/docx-images/image31.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-33",
+      "title": "律师Word图片样本-33",
+      "filePath": "data/extracted/docx-images/image33.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-34",
+      "title": "律师Word图片样本-34",
+      "filePath": "data/extracted/docx-images/image34.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-35",
+      "title": "律师Word图片样本-35",
+      "filePath": "data/extracted/docx-images/image35.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-36",
+      "title": "律师Word图片样本-36",
+      "filePath": "data/extracted/docx-images/image36.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-41",
+      "title": "律师Word图片样本-41",
+      "filePath": "data/extracted/docx-images/image41.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-47",
+      "title": "律师Word图片样本-47",
+      "filePath": "data/extracted/docx-images/image47.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-53",
+      "title": "律师Word图片样本-53",
+      "filePath": "data/extracted/docx-images/image53.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-55",
+      "title": "律师Word图片样本-55",
+      "filePath": "data/extracted/docx-images/image55.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-58",
+      "title": "律师Word图片样本-58",
+      "filePath": "data/extracted/docx-images/image58.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-61",
+      "title": "律师Word图片样本-61",
+      "filePath": "data/extracted/docx-images/image61.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-67",
+      "title": "律师Word图片样本-67",
+      "filePath": "data/extracted/docx-images/image67.jpeg",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-71",
+      "title": "律师Word图片样本-71",
+      "filePath": "data/extracted/docx-images/image71.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-77",
+      "title": "律师Word图片样本-77",
+      "filePath": "data/extracted/docx-images/image77.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-79",
+      "title": "律师Word图片样本-79",
+      "filePath": "data/extracted/docx-images/image79.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-88",
+      "title": "律师Word图片样本-88",
+      "filePath": "data/extracted/docx-images/image88.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-91",
+      "title": "律师Word图片样本-91",
+      "filePath": "data/extracted/docx-images/image91.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-94",
+      "title": "律师Word图片样本-94",
+      "filePath": "data/extracted/docx-images/image94.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-96",
+      "title": "律师Word图片样本-96",
+      "filePath": "data/extracted/docx-images/image96.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-100",
+      "title": "律师Word图片样本-100",
+      "filePath": "data/extracted/docx-images/image100.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-104",
+      "title": "律师Word图片样本-104",
+      "filePath": "data/extracted/docx-images/image104.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-106",
+      "title": "律师Word图片样本-106",
+      "filePath": "data/extracted/docx-images/image106.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-108",
+      "title": "律师Word图片样本-108",
+      "filePath": "data/extracted/docx-images/image108.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-110",
+      "title": "律师Word图片样本-110",
+      "filePath": "data/extracted/docx-images/image110.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-111",
+      "title": "律师Word图片样本-111",
+      "filePath": "data/extracted/docx-images/image111.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-117",
+      "title": "律师Word图片样本-117",
+      "filePath": "data/extracted/docx-images/image117.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-119",
+      "title": "律师Word图片样本-119",
+      "filePath": "data/extracted/docx-images/image119.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-120",
+      "title": "律师Word图片样本-120",
+      "filePath": "data/extracted/docx-images/image120.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-121",
+      "title": "律师Word图片样本-121",
+      "filePath": "data/extracted/docx-images/image121.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-125",
+      "title": "律师Word图片样本-125",
+      "filePath": "data/extracted/docx-images/image125.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-126",
+      "title": "律师Word图片样本-126",
+      "filePath": "data/extracted/docx-images/image126.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-127",
+      "title": "律师Word图片样本-127",
+      "filePath": "data/extracted/docx-images/image127.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-130",
+      "title": "律师Word图片样本-130",
+      "filePath": "data/extracted/docx-images/image130.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-133",
+      "title": "律师Word图片样本-133",
+      "filePath": "data/extracted/docx-images/image133.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-135",
+      "title": "律师Word图片样本-135",
+      "filePath": "data/extracted/docx-images/image135.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-136",
+      "title": "律师Word图片样本-136",
+      "filePath": "data/extracted/docx-images/image136.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    },
+    {
+      "id": "lawyer-doc-ocr-image-137",
+      "title": "律师Word图片样本-137",
+      "filePath": "data/extracted/docx-images/image137.png",
+      "expectedRiskLevel": "高风险",
+      "expectedIdentity": "suspected_accused",
+      "labelSource": "lawyer_doc_confirmed",
+      "labelStatus": "active",
+      "category": "accused_product_confirmed"
+    }
+  ]
+}
