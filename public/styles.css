@@ -135,6 +135,10 @@ h1 {
   padding: 16px;
 }
 
+.shell.history-collapsed {
+  grid-template-columns: 340px minmax(560px, 1fr) 92px;
+}
+
 .admin-shell {
   display: grid;
   gap: 16px;
@@ -1023,7 +1027,64 @@ button:hover {
 .lead-list {
   display: grid;
   gap: 10px;
+  max-height: calc(100vh - 165px);
+  overflow: auto;
   padding: 12px;
+}
+
+.history-more {
+  padding: 0 12px 12px;
+}
+
+.history-more button {
+  width: 100%;
+  min-height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface-2);
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.history-more button:hover {
+  border-color: rgba(15, 111, 104, 0.38);
+  background: rgba(15, 111, 104, 0.08);
+}
+
+.panel.list.collapsed {
+  align-self: start;
+  min-height: 0;
+}
+
+.panel.list.collapsed .section-head {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 8px;
+  padding: 12px 8px;
+}
+
+.panel.list.collapsed .section-head h2,
+.panel.list.collapsed .section-head span {
+  writing-mode: vertical-rl;
+}
+
+.ghost-toggle {
+  min-height: 30px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 5px 9px;
+  background: #fff;
+  color: var(--accent-dark);
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.ghost-toggle:hover {
+  border-color: rgba(15, 111, 104, 0.42);
+  background: rgba(15, 111, 104, 0.07);
 }
 
 .lead-card {
@@ -1047,9 +1108,41 @@ button:hover {
   box-shadow: 0 0 0 3px rgba(15, 111, 104, 0.12);
 }
 
+.lead-card-main {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.lead-thumb {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  width: 58px;
+  height: 58px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.lead-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lead-card-text {
+  min-width: 0;
+}
+
 .lead-card h3 {
   font-size: 14px;
   line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 
 .lead-meta {
@@ -1274,6 +1367,58 @@ button:hover {
 
 .report-block h3 {
   font-size: 14px;
+}
+
+.basis-summary {
+  background: #fff;
+}
+
+.basis-list {
+  display: grid;
+  gap: 7px;
+}
+
+.basis-row {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: var(--surface-2);
+}
+
+.basis-row span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.basis-row strong {
+  color: #2f3542;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.next-action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.next-action-card {
+  display: grid;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  background: var(--surface-2);
+}
+
+.next-action-card > strong {
+  color: #2f3542;
+  font-size: 13px;
 }
 
 .case-grid {
@@ -1529,6 +1674,7 @@ button:hover {
   .shell,
   .summary-grid,
   .decision-columns,
+  .next-action-grid,
   .admin-grid.metrics,
   .admin-grid.metrics.compact,
   .admin-command-strip,

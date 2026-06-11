@@ -73,12 +73,10 @@ http://127.0.0.1:3766/admin
 
 ```bash
 DASHSCOPE_API_KEY=你的百炼APIKey
-DASHSCOPE_OCR_MODEL=qwen-vl-ocr
-DASHSCOPE_VISION_MODEL=qwen-vl-ocr
+DASHSCOPE_MULTIMODAL_MODEL=qwen3-vl-plus
 DASHSCOPE_REASONING_MODEL=qwen-plus
 MODEL_TIMEOUT_MS=8000
-OCR_TIMEOUT_MS=8000
-VISION_TIMEOUT_MS=8000
+MULTIMODAL_TIMEOUT_MS=30000
 IMAGE_EMBEDDING_MATCH_THRESHOLD=90
 ```
 
@@ -126,7 +124,7 @@ npm run scrape:xijiu:official
 npm run ingest:docx
 ```
 
-带 OCR 的律师 Word 文档入库：
+带图片文字抽取的律师 Word 文档入库：
 
 ```bash
 npm run ingest:docx:ocr
@@ -157,7 +155,7 @@ npm run evaluate:lawyer-doc
   ↓
 正品库 / 侵权库对照
   ↓
-图片内容识别与 OCR 辅助
+图片内容识别与多模态辅助
   ↓
 律师文档结构化标准判断
   ↓

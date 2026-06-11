@@ -150,7 +150,7 @@ export default function AdminKnowledgeManager({ initialData }) {
       });
       setData(next);
       setProductName("");
-      setStatus("结构化产品名已添加，会直接参与 OCR/文本命中的正品排除信号。");
+      setStatus("结构化产品名已添加，会直接参与多模态文字识别/文本命中的正品排除信号。");
     } catch (error) {
       setStatus(error.message);
     } finally {
@@ -257,7 +257,7 @@ export default function AdminKnowledgeManager({ initialData }) {
         <div className="admin-command-card accent">
           <span>当前策略</span>
           <strong>{strategy.name || "平衡模式"}</strong>
-          <small>高风险阈值 {strategy.highRiskThreshold ?? 75} / 向量阈值 {strategy.embeddingSimilarityThreshold ?? 90}</small>
+          <small>高风险阈值 {strategy.highRiskThreshold ?? 75} / 相似候选阈值 {strategy.embeddingSimilarityThreshold ?? 90}</small>
         </div>
         <div className="admin-command-card">
           <span>人工样本</span>
@@ -272,7 +272,7 @@ export default function AdminKnowledgeManager({ initialData }) {
         <div className="admin-command-card">
           <span>结构化名称</span>
           <strong>{data.structuredProductNames?.length || 0} 个</strong>
-          <small>参与 OCR 和文本命中</small>
+          <small>参与多模态文字识别和文本命中</small>
         </div>
       </div>
 
@@ -370,7 +370,7 @@ export default function AdminKnowledgeManager({ initialData }) {
               <input type="number" min="0" max="50" value={strategyForm.lowRiskMax ?? 29} onChange={(event) => updateStrategyForm("lowRiskMax", event.target.value)} />
             </label>
             <label>
-              向量相似阈值
+              相似候选阈值
               <input type="number" min="75" max="99" value={strategyForm.embeddingSimilarityThreshold ?? 90} onChange={(event) => updateStrategyForm("embeddingSimilarityThreshold", event.target.value)} />
             </label>
             <label>
@@ -466,7 +466,7 @@ export default function AdminKnowledgeManager({ initialData }) {
             <span>{data.structuredProductNames?.length || 0} 个</span>
           </div>
           <form className="admin-inline-form" onSubmit={addProductName}>
-            <input value={productName} onChange={(event) => setProductName(event.target.value)} placeholder="新增 OCR/文本可命中的正品名称" />
+            <input value={productName} onChange={(event) => setProductName(event.target.value)} placeholder="新增多模态文字识别/文本可命中的正品名称" />
             <button type="submit" className="primary" disabled={busy}>
               添加
             </button>
@@ -484,7 +484,7 @@ export default function AdminKnowledgeManager({ initialData }) {
               </span>
             ))}
           </div>
-          <p className="admin-note inline">产品名库不需要重新生成向量，会在 OCR 结果、文字线索和规则解释中直接生效。</p>
+          <p className="admin-note inline">产品名库不需要重新生成向量，会在多模态文字识别结果、文字线索和规则解释中直接生效。</p>
         </div>
 
         <div className="admin-query-panel">

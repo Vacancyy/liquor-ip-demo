@@ -21,15 +21,13 @@ const docKnowledgePath = path.join(dataDir, "extracted", "ocr", "xijiu-doc-knowl
 const knowledgeDir = path.join(dataDir, "knowledge");
 const HOST = process.env.HOST || "127.0.0.1";
 const PORT = Number(process.env.PORT || 3766);
-const configuredVisionModel = process.env.DASHSCOPE_VISION_MODEL || "";
-const OCR_MODEL = process.env.DASHSCOPE_OCR_MODEL || "qwen-vl-ocr";
-const VISION_MODEL = /^qwen3\./.test(configuredVisionModel) ? OCR_MODEL : (configuredVisionModel || OCR_MODEL);
+const MULTIMODAL_MODEL = process.env.DASHSCOPE_MULTIMODAL_MODEL || process.env.DASHSCOPE_VL_MODEL || "qwen3-vl-plus";
 const REASONING_MODEL = process.env.DASHSCOPE_REASONING_MODEL || "qwen-plus";
 const ANTHROPIC_MODEL = process.env.ANTHROPIC_MODEL || process.env.ANTHROPIC_DEFAULT_SONNET_MODEL || "glm-5";
 const MODEL_TIMEOUT_MS = Number(process.env.MODEL_TIMEOUT_MS || 8000);
-const OCR_TIMEOUT_MS = Number(process.env.OCR_TIMEOUT_MS || MODEL_TIMEOUT_MS);
-const VISION_TIMEOUT_MS = Number(process.env.VISION_TIMEOUT_MS || MODEL_TIMEOUT_MS);
+const MULTIMODAL_TIMEOUT_MS = Number(process.env.MULTIMODAL_TIMEOUT_MS || 30000);
 const EMBEDDING_MATCH_THRESHOLD = Number(process.env.IMAGE_EMBEDDING_MATCH_THRESHOLD || 90);
+const thumbnailCache = new Map();
 
 const defaultJudgementStrategy = {
   mode: "balanced",
@@ -171,13 +169,33 @@ function json(res, status, body) {
   res.end(JSON.stringify(body));
 }
 
-function publicLead(lead) {
+async function publicLead(lead) {
   return {
     ...lead,
     imageData: "",
+    imageThumbnail: await imageThumbnailFromDataUrl(lead.imageData),
     hasImage: Boolean(lead.imageData),
     imageSize: lead.imageData ? lead.imageData.length : 0
   };
+}
+
+async function imageThumbnailFromDataUrl(dataUrl) {
+  if (!dataUrl) return "";
+  const key = createHash("sha1").update(dataUrl.slice(0, 256)).update(String(dataUrl.length)).digest("hex");
+  if (thumbnailCache.has(key)) return thumbnailCache.get(key);
+  try {
+    const buffer = imageBufferFromDataUrl(dataUrl);
+    if (!buffer) return "";
+    const thumbnail = await sharp(buffer)
+      .resize(96, 96, { fit: "cover" })
+      .jpeg({ quality: 68 })
+      .toBuffer({ resolveWithObject: false });
+    const value = `data:image/jpeg;base64,${thumbnail.toString("base64")}`;
+    thumbnailCache.set(key, value);
+    return value;
+  } catch {
+    return "";
+  }
 }
 
 async function parseBody(req) {
@@ -295,7 +313,7 @@ function classifyProductIdentity(haystack, lawyerKnowledge = loadLawyerKnowledge
     return {
       type: "likely_authentic",
       label: "更接近权利人正品/权利产品样式",
-      reason: "线索标题或文件名标注为真品，且未命中律师资料中的被控产品标识。",
+      reason: "当前材料未发现被控产品名称、仿冒标识或非权利人使用习酒包装的明确线索。",
       matches: []
     };
   }
@@ -418,6 +436,17 @@ function detectProducerNames(text) {
   return regexMatches(text, /([\u4e00-\u9fa5]{2,24}(?:股份有限公司|有限责任公司|有限公司|酒业集团|酒业有限公司|酒厂|集团))/g).slice(0, 6);
 }
 
+function isOfficialXijiuSignal(value) {
+  return /贵州习酒|习酒股份|习酒集团|习酒投资控股|习酒有限|贵州茅台酒厂|茅台酒厂.*习酒|权利人正品|官方|授权|防伪|正品/.test(String(value || ""));
+}
+
+function isNonPartyVersionSignal(value) {
+  const text = String(value || "");
+  const mentionsYearOrVersion = /(19|20)\d{2}|年份|版本|版式|容量|规格|批次/.test(text);
+  const mentionsActualParty = /公司|酒业|酒厂|集团|生产商|生产方|运营方|联合出品|经销商|店铺|旗舰店|主体|品牌方/.test(text);
+  return mentionsYearOrVersion && !mentionsActualParty;
+}
+
 function detectProductNames(text) {
   const source = String(text || "");
   return uniqueList([
@@ -444,15 +473,17 @@ function buildStructuredEvidence({
   const officialSignals = structuredSignalList([
     ...(modelResult?.officialSignals || []),
     ...(modelResult?.structuredVisualAssessment?.officialSignals || []),
-    ...producerNames.filter((name) => /贵州习酒|习酒股份|习酒投资控股|贵州茅台酒厂.*习酒/.test(name)),
+    ...(modelResult?.thirdPartySignals || []).filter(isOfficialXijiuSignal),
+    ...(modelResult?.structuredVisualAssessment?.thirdPartySignals || []).filter(isOfficialXijiuSignal),
+    ...producerNames.filter(isOfficialXijiuSignal),
     ...(confirmedSample?.category === "authentic_product_confirmed" ? [confirmedSample.title] : []),
     ...regexMatches(text, /(官方旗舰店|官方商城|授权店|贵州习酒官网|权利人正品|正品)/g)
   ]);
   const thirdPartySignals = structuredSignalList([
-    ...(modelResult?.thirdPartySignals || []),
-    ...(modelResult?.structuredVisualAssessment?.thirdPartySignals || []),
+    ...(modelResult?.thirdPartySignals || []).filter((item) => !isOfficialXijiuSignal(item) && !isNonPartyVersionSignal(item)),
+    ...(modelResult?.structuredVisualAssessment?.thirdPartySignals || []).filter((item) => !isOfficialXijiuSignal(item) && !isNonPartyVersionSignal(item)),
     ...thirdPartyMarks,
-    ...producerNames.filter((name) => !/贵州习酒|习酒股份|习酒投资控股|贵州茅台酒厂.*习酒/.test(name)),
+    ...producerNames.filter((name) => !isOfficialXijiuSignal(name)),
     ...effectiveAccusedMatches.flatMap((item) => item.hits || [])
   ]);
   const vectorMatchType = confirmedSample?.matchType || "";
@@ -498,7 +529,7 @@ function buildStructuredEvidence({
       category: confirmedSample.category || ""
     } : null,
     identityHint: productIdentity.type,
-    evidenceStrength: confirmedSample
+    evidenceStrength: sampleMatchIsDecisive(confirmedSample)
       ? "strong_sample_match"
       : protectedElements.length >= 3 && thirdPartySignals.length
       ? "structured_risk_match"
@@ -508,10 +539,19 @@ function buildStructuredEvidence({
     decisionHints: uniqueList([
       officialSignals.length && !thirdPartySignals.length ? "存在官方/正品信号且未见第三方主体，应优先正品保护" : "",
       thirdPartySignals.length && protectedElements.length >= 2 ? "存在第三方信号并命中受保护包装要素，应提高风险" : "",
-      confirmedSample?.expectedRiskLevel === "高风险" ? "命中律师确认侵权图片样本" : "",
-      confirmedSample?.expectedRiskLevel === "低风险" ? "命中正品图片样本" : ""
+      sampleMatchIsDecisive(confirmedSample) && confirmedSample?.expectedRiskLevel === "高风险" ? "精确命中律师确认侵权图片样本" : "",
+      sampleMatchIsDecisive(confirmedSample) && confirmedSample?.expectedRiskLevel === "低风险" ? "精确命中正品图片样本" : "",
+      sampleMatchIsReference(confirmedSample) ? "找到相似样本，仅作为特征比对候选，不直接作为判断结论" : ""
     ])
   };
+}
+
+function sampleMatchIsDecisive(sample) {
+  return sample?.matchType === "exact_hash";
+}
+
+function sampleMatchIsReference(sample) {
+  return Boolean(sample) && !sampleMatchIsDecisive(sample);
 }
 
 function evaluateStructuredCriteria({
@@ -567,16 +607,10 @@ function evaluateStructuredCriteria({
       });
     }
   }
-  if (sourceIsLawyerAccusedCase || imageVectorMatch?.side === "accused") {
+  if (sourceIsLawyerAccusedCase) {
     add("image_vector_accused_match", [
       imageVectorMatch?.sampleTitle,
       imageVectorMatch?.similarity ? `相似度 ${imageVectorMatch.similarity}%` : ""
-    ]);
-  }
-  if (imageVectorMatch?.side === "authentic") {
-    add("image_vector_authentic_match", [
-      imageVectorMatch.sampleTitle,
-      imageVectorMatch.similarity ? `相似度 ${imageVectorMatch.similarity}%` : ""
     ]);
   }
 
@@ -725,14 +759,18 @@ function calculateLawyerRiskScore({
   const accusedEvidence = accusedMatches.flatMap((item) => item.hits || []);
   const authenticEvidence = authenticMatches.flatMap((item) => item.hits || []);
   const hasStructuredThirdParty = Boolean(structuredEvidence?.thirdPartySignals?.length);
-  const authenticProtected = productIdentity.type === "likely_authentic"
-    && !accusedMatches.length
-    && !thirdPartyMarks.length
-    && !genericThirdPartyVisualRisk
-    && !hasStructuredThirdParty
-    && !sourceIsLawyerAccusedCase;
+  const hasDecisiveAccusedSample = sampleMatchIsDecisive(confirmedSample) && confirmedSample?.expectedRiskLevel === "高风险";
+  const hasConcreteAccusedOrThirdParty = Boolean(
+    accusedMatches.length ||
+    thirdPartyMarks.length ||
+    hasStructuredThirdParty ||
+    sourceIsLawyerAccusedCase ||
+    hasDecisiveAccusedSample ||
+    productIdentity.type === "suspected_accused"
+  );
+  const authenticProtectionGate = productIdentity.type === "likely_authentic" && !hasConcreteAccusedOrThirdParty;
 
-  if (accusedMatches.length && !authenticProtected) {
+  if (accusedMatches.length && !authenticProtectionGate) {
     const strongest = Math.max(...accusedMatches.map((item) => Number(item.riskWeight || 0)), scoringRule(scoringRules, "score-accused-product", 50));
     add("score-accused-product", "命中律师资料被控产品名称", strongest, accusedEvidence);
   }
@@ -745,9 +783,9 @@ function calculateLawyerRiskScore({
     add("score-lawyer-case-source", "样本来自律师资料中的被控产品案例", 75, ["律师资料：习酒典型侵权产品图片及判决"]);
   }
 
-  if (confirmedSample?.expectedRiskLevel === "高风险") {
-    const matchLabel = confirmedSample.matchType === "visual_similarity" ? "视觉相似命中律师确认高风险样本" : "命中确认的高风险样本";
-    const matchScore = confirmedSample.matchType === "visual_similarity" ? strategy.confirmedAccusedVisualScore : strategy.confirmedAccusedScore;
+  if (sampleMatchIsDecisive(confirmedSample) && confirmedSample?.expectedRiskLevel === "高风险") {
+    const matchLabel = "精确命中确认的高风险样本";
+    const matchScore = strategy.confirmedAccusedScore;
     add("score-confirmed-sample", matchLabel, matchScore, [
       confirmedSample.title,
       confirmedSample.reason,
@@ -755,33 +793,33 @@ function calculateLawyerRiskScore({
     ]);
   }
 
-  if (confirmedSample?.expectedRiskLevel === "低风险") {
-    add("score-confirmed-authentic", "命中确认的低风险/正品样本", strategy.confirmedAuthenticScore, [
+  if (sampleMatchIsDecisive(confirmedSample) && confirmedSample?.expectedRiskLevel === "低风险") {
+    add("score-confirmed-authentic", "精确命中确认的低风险/正品样本", strategy.confirmedAuthenticScore, [
       confirmedSample.title,
       confirmedSample.reason,
       confirmedSample.similarity ? `相似度 ${confirmedSample.similarity}%` : ""
     ]);
   }
 
-  if ((thirdPartyMarks.length || genericThirdPartyVisualRisk) && !authenticProtected) {
+  if ((thirdPartyMarks.length || genericThirdPartyVisualRisk) && !authenticProtectionGate) {
     add("score-third-party-mark", "命中第三方疑似侵权标识", scoringRule(scoringRules, "score-third-party-mark", 35), thirdPartyMarks);
   }
 
-  if (structuredEvidence?.thirdPartySignals?.length && structuredEvidence?.protectedElementsMatched?.length >= 2 && !authenticProtected) {
+  if (structuredEvidence?.thirdPartySignals?.length && structuredEvidence?.protectedElementsMatched?.length >= 2 && !authenticProtectionGate) {
     add("score-structured-third-party-protected", "结构化识别显示第三方主体/标识叠加受保护包装要素", 30, [
       ...structuredEvidence.thirdPartySignals,
       ...structuredEvidence.protectedElementsMatched
     ]);
   }
 
-  if (courtFactorNames.length >= 4 && !authenticProtected) {
+  if (courtFactorNames.length >= 4 && !authenticProtectionGate) {
     add("score-court-factors-strong", "命中 4 个以上法院裁判外观要素", scoringRule(scoringRules, "score-court-factors-strong", 25), courtFactorNames);
-  } else if (courtFactorNames.length >= 2 && !authenticProtected) {
+  } else if (courtFactorNames.length >= 2 && !authenticProtectionGate) {
     add("score-court-factors-mid", "命中 2-3 个法院裁判外观要素", scoringRule(scoringRules, "score-court-factors-mid", 15), courtFactorNames);
   }
 
-  if (modelOnlySuspiciousVisual && productIdentity.type !== "likely_authentic" && !authenticProtected) {
-    add("score-model-visual", "视觉模型提示高度近似律师裁判要素", 15, courtFactorNames);
+  if (modelOnlySuspiciousVisual && productIdentity.type !== "likely_authentic" && !authenticProtectionGate) {
+    add("score-model-visual", "多模态模型提示高度近似律师裁判要素", 15, courtFactorNames);
   }
 
   if (hasRiskContext) {
@@ -792,9 +830,9 @@ function calculateLawyerRiskScore({
     ]);
   }
 
-  const hasAccusedOrThirdParty = accusedMatches.length || thirdPartyMarks.length || genericThirdPartyVisualRisk || hasStructuredThirdParty;
+  const hasAccusedOrThirdParty = hasConcreteAccusedOrThirdParty || genericThirdPartyVisualRisk;
   if (productIdentity.type === "likely_authentic" && !hasAccusedOrThirdParty) {
-    add("score-authentic-protection", "明确识别为权利人正品，且未命中第三方被控标识", strategy.authenticProtectionScore, authenticEvidence);
+    add("score-authentic-protection", "没有看到其他厂家或仿冒标识", strategy.authenticProtectionScore, authenticEvidence);
   }
 
   if (structuredEvidence?.officialSignals?.length && !structuredEvidence?.thirdPartySignals?.length) {
@@ -803,7 +841,7 @@ function calculateLawyerRiskScore({
 
   for (const criterion of structuredCriteriaMatches || []) {
     if (!criterion.score) continue;
-    if (criterion.score > 0 && authenticProtected) continue;
+    if (criterion.score > 0 && authenticProtectionGate) continue;
     if (criterion.id === "criterion-third-party-protected-combo") continue;
     if (criterion.id === "criterion-official-authentic-exclusion") continue;
     add(`score-${criterion.id}`, `结构化标准：${criterion.label}`, criterion.score, criterion.evidence);
@@ -811,7 +849,7 @@ function calculateLawyerRiskScore({
 
   for (const docRule of documentRuleMatches || []) {
     if (!docRule.score) continue;
-    if (docRule.score > 0 && authenticProtected) continue;
+    if (docRule.score > 0 && authenticProtectionGate) continue;
     if (/^doc-element-/.test(docRule.id)) continue;
     if (docRule.id === "doc-combo-third-party-core-elements" && structuredEvidence?.thirdPartySignals?.length && structuredEvidence?.protectedElementsMatched?.length >= 2) continue;
     if (docRule.id === "doc-combo-official-no-third-party") continue;
@@ -819,16 +857,17 @@ function calculateLawyerRiskScore({
   }
 
   if (imageProvided && !hasRiskContext && !hasAccusedOrThirdParty) {
-    add("score-image-only", "只有图片、缺少销售场景", scoringRule(scoringRules, "score-image-only", -10), ["未提供来源链接或可疑销售场景"]);
+    add("score-image-only", "目前只有图片，缺少销售来源材料", scoringRule(scoringRules, "score-image-only", -10), ["未提供商品链接、店铺页面或购买记录"]);
   }
 
-  const rawScore = scoreItems.reduce((sum, item) => sum + item.score, 0);
-  const score = Math.max(0, Math.min(100, Math.round(rawScore)));
   const thresholds = {
     ...(scoringRules.thresholds || { lowMax: 29, midMax: 74, highMin: 75 }),
     lowMax: strategy.lowRiskMax,
     highMin: strategy.highRiskThreshold
   };
+  const rawScore = scoreItems.reduce((sum, item) => sum + item.score, 0);
+  const gatedRawScore = authenticProtectionGate ? Math.min(rawScore, thresholds.lowMax) : rawScore;
+  const score = Math.max(0, Math.min(100, Math.round(gatedRawScore)));
   const riskLevel = score >= thresholds.highMin ? "高风险" : score > thresholds.lowMax ? "中风险" : "低风险";
   return {
     score,
@@ -863,53 +902,60 @@ function buildEvidenceDecision({
   const thirdParty = structuredEvidence?.thirdPartySignals || [];
   const official = structuredEvidence?.officialSignals || [];
   const protectedElements = structuredEvidence?.protectedElementsMatched || [];
+  const hasDecisiveAccusedSample = sampleMatchIsDecisive(confirmedSample) && confirmedSample?.expectedRiskLevel === "高风险";
+  const hasConcreteHighRiskSubject = Boolean(
+    thirdParty.length ||
+    sourceIsLawyerAccusedCase ||
+    hasDecisiveAccusedSample ||
+    productIdentity.type === "suspected_accused"
+  );
+  const authenticWithoutAccusedSubject = productIdentity.type === "likely_authentic" && !hasConcreteHighRiskSubject;
   const positiveScoreItems = (scoring.scoreItems || []).filter((item) => item.score > 0);
   const negativeScoreItems = (scoring.scoreItems || []).filter((item) => item.score < 0);
 
-  if (vector?.side === "accused") addHigh("命中律师确认侵权图库", [vector.sampleTitle, vector.similarity ? `相似度 ${vector.similarity}%` : ""]);
-  if (vector?.side === "authentic") addLow("命中正品图库", [vector.sampleTitle, vector.similarity ? `相似度 ${vector.similarity}%` : ""]);
-  if (confirmedSample?.expectedRiskLevel === "高风险") addHigh("确认样本标注为高风险", [confirmedSample.title, confirmedSample.reason]);
-  if (confirmedSample?.expectedRiskLevel === "低风险") addLow("确认样本标注为低风险/正品", [confirmedSample.title, confirmedSample.reason]);
+  if (vector && sampleMatchIsReference(confirmedSample)) reviewFocus.push(`相似样本仅作候选参考：${vector.sampleTitle || "样本"}${vector.similarity ? `，相似度 ${vector.similarity}%` : ""}`);
+  if (sampleMatchIsDecisive(confirmedSample) && confirmedSample?.expectedRiskLevel === "高风险") addHigh("精确命中确认样本且标注为高风险", [confirmedSample.title, confirmedSample.reason]);
+  if (sampleMatchIsDecisive(confirmedSample) && confirmedSample?.expectedRiskLevel === "低风险") addLow("精确命中确认样本且标注为低风险/正品", [confirmedSample.title, confirmedSample.reason]);
   if (sourceIsLawyerAccusedCase) addHigh("来源为律师典型侵权资料", ["律师 Word 典型侵权产品图片及判决"]);
   if (thirdParty.length) addHigh("识别到第三方主体或异常标识", thirdParty);
   if (official.length) addLow("识别到官方/正品/授权信号", official);
-  if (protectedElements.length >= 2) addHigh("命中多个受保护包装要素", protectedElements);
-  if (productIdentity.type === "likely_authentic") addLow("产品身份更接近权利人正品", [productIdentity.reason]);
+  if (protectedElements.length >= 2 && !authenticWithoutAccusedSubject) addHigh("命中多个受保护包装要素", protectedElements);
+  if (productIdentity.type === "likely_authentic") addLow("未看到明确侵权线索", [productIdentity.reason]);
   if (productIdentity.type === "suspected_accused") addHigh("产品身份进入疑似被控分支", [productIdentity.reason]);
 
   for (const item of [...structuredCriteriaMatches, ...documentRuleMatches]) {
-    if (item.score > 0) addHigh(item.label, item.evidence);
+    if (item.score > 0 && !authenticWithoutAccusedSubject) addHigh(item.label, item.evidence);
     if (item.score < 0) addLow(item.label, item.evidence);
   }
   positiveScoreItems
-    .filter((item) => item.id !== "score-source-context")
+    .filter((item) => item.id !== "score-source-context" && !authenticWithoutAccusedSubject)
     .forEach((item) => addHigh(item.label, item.evidence));
   negativeScoreItems.forEach((item) => addLow(item.label, item.evidence));
 
   const hasStrongHigh = highRiskEvidence.some((item) => /侵权图库|确认样本|律师典型侵权|第三方主体|被控|受保护包装|第三方主体叠加/.test(item.label));
   const hasStrongLow = lowRiskEvidence.some((item) => /正品图库|低风险|官方|正品|授权|权利人正品/.test(item.label));
   if (hasStrongHigh && hasStrongLow) {
-    conflictPoints.push("同时存在高风险证据和正品/排除证据，需要律师优先复核证据来源。");
+    conflictPoints.push("图片中既有需要关注的相似点，也有正品或授权相关信息，需要先核实材料来源。");
   }
-  if (vector?.side === "authentic" && thirdParty.length) {
-    conflictPoints.push("图片命中正品图库，但同时识别到第三方主体或异常标识。");
+  if (sampleMatchIsDecisive(confirmedSample) && vector?.side === "authentic" && thirdParty.length) {
+    conflictPoints.push("图片与正品参考图一致，但同时出现非习酒方信息，需要核实是否授权。");
   }
-  if (vector?.side === "accused" && official.length) {
-    conflictPoints.push("图片命中侵权图库，但同时出现官方/正品/授权信号。");
+  if (sampleMatchIsDecisive(confirmedSample) && vector?.side === "accused" && official.length) {
+    conflictPoints.push("图片与问题参考图一致，但同时出现官方或授权信息，需要核实真伪。");
   }
   if (protectedElements.length >= 2 && !thirdParty.length && !sourceIsLawyerAccusedCase && productIdentity.type !== "suspected_accused") {
-    conflictPoints.push("命中包装要素但缺少第三方主体，不能仅凭权利产品特征推定侵权。");
+    reviewFocus.push("包装外观有相似点，但未看到非习酒方信息；该点只能作为核实提示，不能作为冲突或侵权理由。");
   }
   if (thirdParty.length && protectedElements.length < 2) {
-    conflictPoints.push("存在第三方主体，但受保护包装要素不足，需要补充瓶身/酒盒清晰图。");
+    conflictPoints.push("看到非习酒方信息，但包装细节不足，需要补充瓶身或酒盒清晰图。");
   }
 
   let decisionType = "needs_review";
   let decisionLabel = "人工复核";
   if (conflictPoints.length) {
     decisionType = "conflict_review";
-    decisionLabel = "证据冲突待复核";
-  } else if (hasStrongLow && !hasStrongHigh) {
+    decisionLabel = "需律师进一步确认";
+  } else if ((hasStrongLow || productIdentity.type === "likely_authentic") && !hasStrongHigh) {
     decisionType = "authentic_protected";
     decisionLabel = "正品保护/低风险";
   } else if (risk === "高风险" && hasStrongHigh) {
@@ -937,11 +983,16 @@ function buildEvidenceDecision({
     conflictPoints,
     reviewFocus: uniqueList(reviewFocus),
     layers: [
-      { name: "样本比对", result: vector ? `找到相似${vector.side === "authentic" ? "正品" : "高风险"}样本 ${vector.similarity || ""}%`.trim() : "未找到相似样本" },
-      { name: "第三方主体", result: thirdParty.length ? thirdParty.join("、") : "未识别" },
-      { name: "核心包装要素", result: protectedElements.length ? protectedElements.join("、") : "未识别" },
-      { name: "正品排除信号", result: official.length ? official.join("、") : "未识别" },
-      { name: "来源/销售证据", result: hasLink || hasDoor || hasUserContext ? "已提供部分来源或说明" : "缺少" }
+      {
+        name: "图库参考",
+        result: vector
+          ? `找到外观相似参考图${vector.similarity ? ` ${vector.similarity}%` : ""}，仅作参考，不能单独说明真假或侵权`
+          : "未找到可参考的相似图片"
+      },
+      { name: "非习酒方信息", result: thirdParty.length ? thirdParty.join("、") : "暂未看到" },
+      { name: "包装相似点", result: protectedElements.length ? protectedElements.join("、") : "暂未看到" },
+      { name: "正品/授权信号", result: official.length ? official.join("、") : "暂未看到" },
+      { name: "销售来源材料", result: hasLink || hasDoor || hasUserContext ? "已提供部分来源或说明" : "暂未提供" }
     ]
   };
 }
@@ -951,6 +1002,7 @@ function modelEvidenceText(modelResult) {
   const structured = modelResult.structuredVisualAssessment || {};
   const documentElements = structured.documentElements || {};
   return [
+    modelResult.extractedText,
     modelResult.conclusion,
     modelResult.recommendedAction,
     modelResult.detectedBrand,
@@ -1040,6 +1092,7 @@ function normalizeVisionResult(result) {
   ]);
   return {
     ...result,
+    extractedText: stringValue(result.extractedText),
     detectedBrand: stringValue(result.detectedBrand),
     detectedProductName: stringValue(result.detectedProductName),
     producerName: stringValue(result.producerName),
@@ -1092,12 +1145,12 @@ function extractJson(text) {
 function readableModelError(message) {
   const text = String(message || "");
   if (text.includes("AbortError") || text.includes("model_timeout")) return "模型响应超时，已用知识库规则兜底";
-  if (text.includes("Arrearage")) return "视觉大模型不可用：模型账户欠费，已用知识库规则兜底";
-  if (text.includes("DASHSCOPE_API_KEY")) return "视觉大模型未配置，已用知识库规则兜底";
+  if (text.includes("Arrearage")) return "多模态模型不可用：模型账户欠费，已用知识库规则兜底";
+  if (text.includes("DASHSCOPE_API_KEY")) return "多模态模型未配置，已用知识库规则兜底";
   if (text.includes("ANTHROPIC_AUTH_TOKEN")) return "阿里云模型未配置，已用知识库规则兜底";
   if (text.includes("anthropic_model_failed")) return "阿里云模型调用失败，已用知识库规则兜底";
-  if (text.includes("vision_model_failed")) return "视觉大模型调用失败，已用知识库规则兜底";
-  if (text.includes("reasoning_model_failed")) return "推理模型调用失败，已用视觉模型和知识库结果";
+  if (text.includes("multimodal_model_failed") || text.includes("vision_model_failed")) return "多模态模型调用失败，已用知识库规则兜底";
+  if (text.includes("reasoning_model_failed")) return "推理模型调用失败，已用多模态模型和知识库结果";
   return "本地知识库规则兜底";
 }
 
@@ -1163,7 +1216,7 @@ function formatDocKnowledge(knowledge) {
   const reasons = (knowledge.courtReasons || []).slice(0, 12).map((item) => `- ${item}`).join("\n") || "- 暂无";
   return [
     `来源：${knowledge.source || "律所 Word 资料"}`,
-    `资料规模：${knowledge.summary?.caseRowCount || 0} 条案例行，${knowledge.summary?.embeddedImageCount || 0} 张内嵌图片，${knowledge.summary?.ocrImageCount || 0} 张已 OCR。`,
+    `资料规模：${knowledge.summary?.caseRowCount || 0} 条案例行，${knowledge.summary?.embeddedImageCount || 0} 张内嵌图片，${knowledge.summary?.ocrImageCount || 0} 张已完成图片文字抽取。`,
     `抽取权利基础：${rightBases}`,
     `抽取视觉要素：${visualFactors}`,
     `可复用规则：\n${rules}`,
@@ -1192,7 +1245,7 @@ function activeModelName() {
   if (process.env.USE_ANTHROPIC_VISION === "1" && process.env.ANTHROPIC_AUTH_TOKEN && process.env.ANTHROPIC_BASE_URL) {
     return `阿里云模型：${ANTHROPIC_MODEL}`;
   }
-  return `视觉大模型：${VISION_MODEL}`;
+  return `多模态模型：${MULTIMODAL_MODEL}`;
 }
 
 function imageSourceFromDataUrl(dataUrl) {
@@ -1205,6 +1258,19 @@ function imageBufferFromDataUrl(dataUrl) {
   const image = imageSourceFromDataUrl(dataUrl);
   if (!image) return null;
   return Buffer.from(image.data, "base64");
+}
+
+function imageMimeFromPath(filePath) {
+  const ext = path.extname(filePath || "").toLowerCase();
+  if (ext === ".png") return "image/png";
+  if (ext === ".webp") return "image/webp";
+  return "image/jpeg";
+}
+
+function imageDataUrlFromFile(filePath) {
+  if (!filePath || !existsSync(filePath)) return "";
+  const buffer = readFileSync(filePath);
+  return `data:${imageMimeFromPath(filePath)};base64,${buffer.toString("base64")}`;
 }
 
 function imageHashFromDataUrl(dataUrl) {
@@ -1387,7 +1453,7 @@ async function callAnthropicModel(lead, db, prompt) {
         }
       ]
     })
-  }, VISION_TIMEOUT_MS);
+  }, MULTIMODAL_TIMEOUT_MS);
   if (!response.ok) throw new Error(`anthropic_model_failed:${response.status}:${await response.text()}`);
   const data = await response.json();
   const content = Array.isArray(data.content)
@@ -1396,7 +1462,7 @@ async function callAnthropicModel(lead, db, prompt) {
   return normalizeVisionResult(extractJson(content));
 }
 
-async function callDashscopeVisionModel(lead, prompt) {
+async function callDashscopeMultimodalModel(lead, prompt) {
   const apiKey = process.env.DASHSCOPE_API_KEY;
   if (!apiKey || !lead.imageData) return null;
 
@@ -1407,7 +1473,7 @@ async function callDashscopeVisionModel(lead, prompt) {
       "content-type": "application/json"
     },
     body: JSON.stringify({
-      model: VISION_MODEL,
+      model: MULTIMODAL_MODEL,
       temperature: 0.1,
       messages: [
         {
@@ -1419,15 +1485,53 @@ async function callDashscopeVisionModel(lead, prompt) {
         }
       ]
     })
-  }, VISION_TIMEOUT_MS);
-  if (!response.ok) throw new Error(`vision_model_failed:${response.status}:${await response.text()}`);
+  }, MULTIMODAL_TIMEOUT_MS);
+  if (!response.ok) throw new Error(`multimodal_model_failed:${response.status}:${await response.text()}`);
   const data = await response.json();
   return normalizeVisionResult(extractJson(data.choices?.[0]?.message?.content));
 }
 
-async function callDashscopeOcrModel(lead) {
+async function callDashscopePairwiseFeatureCompare(lead, candidateSample) {
   const apiKey = process.env.DASHSCOPE_API_KEY;
-  if (!apiKey || !lead.imageData) return "";
+  const candidateImage = imageDataUrlFromFile(candidateSample?.filePath);
+  if (!apiKey || !lead.imageData || !candidateImage) return null;
+
+  const prompt = `
+你是酒类包装图片的特征比对助手。请比较“图片A：待研判图片”和“图片B：候选参考样本”。
+
+要求：
+1. 不判断是否构成侵权，不判断真假酒。
+2. 必须按固定字段比较，不能只写笼统相似。
+3. 如果受拍摄角度、光线、遮挡、清晰度影响，必须写入 uncertainty。
+4. 重点比较文字、标识、瓶型、酒盒布局、图案位置、颜色组合、生产主体。
+
+候选样本信息：
+- 标题：${candidateSample.title || "候选样本"}
+- 类型：${candidateSample.expectedRiskLevel === "低风险" ? "正品候选" : "高风险候选"}
+- 相似候选来源：${candidateSample.matchType || "unknown"}
+- 相似度：${candidateSample.similarity || "未知"}
+
+必须返回严格 JSON，不要 Markdown：
+{
+  "candidateTitle": "候选样本标题",
+  "candidateType": "正品候选|高风险候选|未知",
+  "overallComparison": "一句话说明两图主要相似和差异",
+  "featureRows": [
+    {
+      "feature": "产品名|品牌/标识|生产主体|瓶型|瓶盖/瓶颈|酒盒布局|图案位置|颜色组合|包装文字位置|其他",
+      "imageA": "待研判图片中该特征",
+      "imageB": "候选样本中该特征",
+      "similarity": "高|中|低|无法判断",
+      "legalRelevance": "高|中|低",
+      "note": "为什么相似或不同"
+    }
+  ],
+  "keySimilarities": ["关键相似点"],
+  "keyDifferences": ["关键差异点"],
+  "uncertainty": ["角度、遮挡、模糊、版本差异等不确定点"],
+  "suggestedReviewFocus": ["建议律师重点复核的问题"]
+}
+`.trim();
 
   const response = await fetchWithTimeout("https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions", {
     method: "POST",
@@ -1436,25 +1540,46 @@ async function callDashscopeOcrModel(lead) {
       "content-type": "application/json"
     },
     body: JSON.stringify({
-      model: OCR_MODEL,
-      temperature: 0,
+      model: MULTIMODAL_MODEL,
+      temperature: 0.1,
       messages: [
         {
           role: "user",
           content: [
-            {
-              type: "text",
-              text: "请对图片做 OCR。若图片中包含酒瓶、酒盒、商标或门头，请同时列出可见文字、品牌词、产品名和可见包装视觉要素。只输出简洁中文。"
-            },
-            { type: "image_url", image_url: { url: lead.imageData } }
+            { type: "text", text: prompt },
+            { type: "text", text: "图片A：待研判图片" },
+            { type: "image_url", image_url: { url: lead.imageData } },
+            { type: "text", text: "图片B：候选参考样本" },
+            { type: "image_url", image_url: { url: candidateImage } }
           ]
         }
       ]
     })
-  }, OCR_TIMEOUT_MS);
-  if (!response.ok) throw new Error(`ocr_model_failed:${response.status}:${await response.text()}`);
+  }, Number(process.env.FEATURE_COMPARE_TIMEOUT_MS || MULTIMODAL_TIMEOUT_MS));
+  if (!response.ok) throw new Error(`feature_compare_failed:${response.status}:${await response.text()}`);
   const data = await response.json();
-  return data.choices?.[0]?.message?.content || "";
+  return normalizeFeatureComparison(extractJson(data.choices?.[0]?.message?.content), candidateSample);
+}
+
+function normalizeFeatureComparison(result, candidateSample) {
+  if (!result) return null;
+  return {
+    candidateTitle: stringValue(result.candidateTitle || candidateSample?.title),
+    candidateType: stringValue(result.candidateType || (candidateSample?.expectedRiskLevel === "低风险" ? "正品候选" : "高风险候选")),
+    overallComparison: stringValue(result.overallComparison),
+    featureRows: (Array.isArray(result.featureRows) ? result.featureRows : []).map((row) => ({
+      feature: stringValue(row.feature),
+      imageA: stringValue(row.imageA),
+      imageB: stringValue(row.imageB),
+      similarity: stringValue(row.similarity),
+      legalRelevance: stringValue(row.legalRelevance),
+      note: stringValue(row.note)
+    })).filter((row) => row.feature),
+    keySimilarities: arrayValue(result.keySimilarities),
+    keyDifferences: arrayValue(result.keyDifferences),
+    uncertainty: arrayValue(result.uncertainty),
+    suggestedReviewFocus: arrayValue(result.suggestedReviewFocus)
+  };
 }
 
 async function callDashscopeReasoningModel(lead, db, draftSections) {
@@ -1462,7 +1587,7 @@ async function callDashscopeReasoningModel(lead, db, draftSections) {
   if (!apiKey || process.env.USE_REASONING_MODEL === "0") return null;
 
   const prompt = `
-你是酒类知识产权线索复核助手。请基于“视觉/OCR 初筛草稿”和“律所知识库”做二次研判。
+你是酒类知识产权线索复核助手。请基于“多模态模型结构化初筛草稿”和“律所知识库”做二次研判。
 
 要求：
 1. 只输出可展示给律师的结论和理由，不输出思考过程。
@@ -1477,7 +1602,7 @@ async function callDashscopeReasoningModel(lead, db, draftSections) {
 - 链接：${lead.sourceUrl || "未提供"}
 - 备注：${lead.description || "无"}
 
-视觉/OCR 初筛草稿：
+多模态模型结构化初筛草稿：
 ${JSON.stringify(draftSections, null, 2)}
 
 ${compactVisionKnowledge()}
@@ -1534,7 +1659,7 @@ async function callVisionModel(lead, db) {
 
 ${knowledgeForPrompt(db)}
 
-请对上传图片进行视觉识别，但不要直接替律师作最终裁判。你的任务是“结构化抽取”，本地律师规则会负责最终评分。
+请对上传图片进行多模态结构化识别，但不要直接替律师作最终裁判。你的任务是“结构化抽取”，本地律师规则会负责最终评分。
 
 必须逐项检查律师 Word 文档中的 8 类要素：
 1. 圆形/圆鼓状瓶体
@@ -1553,6 +1678,7 @@ ${knowledgeForPrompt(db)}
 
 必须返回严格 JSON，不要 Markdown，不要解释，字段如下：
 {
+  "extractedText": "图片中可见文字、品牌词、产品名、厂家或空字符串",
   "detectedBrand": "识别到的品牌或空字符串",
   "detectedProductName": "识别到的产品名或空字符串",
   "producerName": "识别到的生产企业或空字符串",
@@ -1599,7 +1725,7 @@ ${knowledgeForPrompt(db)}
   if (process.env.USE_ANTHROPIC_VISION === "1" && process.env.ANTHROPIC_AUTH_TOKEN && process.env.ANTHROPIC_BASE_URL) {
     return callAnthropicModel(lead, db, prompt);
   }
-  return callDashscopeVisionModel(lead, prompt);
+  return callDashscopeMultimodalModel(lead, prompt);
 }
 
 async function makeReport(lead, db) {
@@ -1609,17 +1735,22 @@ async function makeReport(lead, db) {
   const docKnowledge = loadDocKnowledge();
   const lawyerKnowledge = loadLawyerKnowledge();
   const confirmedSample = await matchConfirmedSample(lead, lawyerKnowledge);
-  const strongSampleMatch = confirmedSample && ["exact_hash", "embedding_similarity", "visual_similarity"].includes(confirmedSample.matchType);
+  const strongSampleMatch = sampleMatchIsDecisive(confirmedSample);
   const shouldUseRemoteModel = process.env.USE_REMOTE_MODEL !== "0"
     && (!strongSampleMatch || process.env.USE_REMOTE_MODEL_FOR_MATCHED_SAMPLES === "1");
-  const ocrPromise = shouldUseRemoteModel ? callDashscopeOcrModel(lead).catch((error) => ({ error })) : Promise.resolve("");
-  const modelPromise = shouldUseRemoteModel ? callVisionModel(lead, db).catch((error) => ({ error })) : Promise.resolve(null);
-  const ocrValue = await ocrPromise;
-  const ocrText = typeof ocrValue === "string" ? ocrValue : "";
-  const ocrError = ocrValue?.error?.message || "";
   const userHaystack = `${lead.title} ${lead.brandHint} ${lead.description} ${(lead.features || []).join(" ")}`.toLowerCase();
-  const haystack = `${userHaystack} ${ocrText}`.toLowerCase();
-  const docMatches = docKnowledgeMatches({ ...lead, description: `${lead.description}\n${ocrText}` }, docKnowledge);
+  const modelValue = shouldUseRemoteModel ? await callVisionModel(lead, db).catch((error) => ({ error })) : null;
+  const modelResult = modelValue && !modelValue.error ? modelValue : null;
+  const modelError = modelValue?.error?.message || "";
+  const featureComparisonValue = shouldUseRemoteModel && sampleMatchIsReference(confirmedSample) && process.env.USE_FEATURE_COMPARE !== "0"
+    ? await callDashscopePairwiseFeatureCompare(lead, confirmedSample).catch((error) => ({ error }))
+    : null;
+  const featureComparison = featureComparisonValue && !featureComparisonValue.error ? featureComparisonValue : null;
+  const featureComparisonError = featureComparisonValue?.error?.message || "";
+  const multimodalText = modelResult ? modelEvidenceText(modelResult) : "";
+  const ocrText = multimodalText;
+  const haystack = `${userHaystack} ${multimodalText}`.toLowerCase();
+  const docMatches = docKnowledgeMatches({ ...lead, description: `${lead.description}\n${multimodalText}` }, docKnowledge);
   const imageProvided = Boolean(lead.imageData);
   const hasUserContext = Boolean(lead.brandHint || lead.sourceUrl || lead.description);
   const hasTrademark = /商标|logo|标识|习酒|窖藏|1988|君品|11218168|9000971|27250465|6018549|12435314/.test(haystack);
@@ -1640,22 +1771,14 @@ async function makeReport(lead, db) {
   const matchedRights = rightBases.filter((right) => right.keywords.some((keyword) => haystack.includes(keyword.toLowerCase()))).slice(0, 6);
   const matchedCases = precedentCases.filter((item) => item.points.some((point) => haystack.includes(point.toLowerCase()) || matchedCourtFactors.includes(point))).slice(0, 3);
 
-  const modelValue = await modelPromise;
-  const modelResult = modelValue && !modelValue.error ? modelValue : null;
-  const modelError = modelValue?.error?.message || ocrError || "";
-
   const modelText = modelEvidenceText(modelResult).toLowerCase();
   const combinedHaystack = `${haystack} ${modelText}`;
   const combinedAuthenticMatches = findTemplateMatches(lawyerKnowledge.authenticProducts, combinedHaystack);
   const directAccusedMatches = findTemplateMatches(lawyerKnowledge.accusedProducts, userHaystack);
   const rawCombinedAccusedMatches = findTemplateMatches(lawyerKnowledge.accusedProducts, combinedHaystack);
   let productIdentity = initialProductIdentity.type === "unknown" ? classifyProductIdentity(combinedHaystack, lawyerKnowledge) : initialProductIdentity;
-  if (confirmedSample) {
-    const matchedBy = confirmedSample.matchType === "embedding_similarity"
-      ? `百炼向量相似命中律师样本（相似度 ${confirmedSample.similarity}%）`
-      : confirmedSample.matchType === "visual_similarity"
-      ? `视觉相似命中律师样本（相似度 ${confirmedSample.similarity}%）`
-      : "精确命中确认样本";
+  if (sampleMatchIsDecisive(confirmedSample)) {
+    const matchedBy = "精确命中确认样本";
     productIdentity = {
       type: confirmedSample.expectedIdentity,
       label: confirmedSample.expectedIdentity === "suspected_accused" ? "疑似被控侵权样式" : "更接近权利人正品/权利产品样式",
@@ -1762,7 +1885,7 @@ async function makeReport(lead, db) {
   });
 
   const similar = [];
-  if (ocrText) similar.push(`OCR 识别补充：${ocrText.slice(0, 140)}。`);
+  if (ocrText) similar.push(`多模态模型识别补充：${ocrText.slice(0, 140)}。`);
   similar.push(`产品身份判断：${productIdentity.label}。${productIdentity.reason}`);
   if (modelOnlySuspiciousVisual) {
     similar.push(`图片视觉要素高度命中律师文档中的被控产品判断标准：${protectedVisualFactorMatch.join("、") || "视觉相似度高"}。`);
@@ -1774,16 +1897,19 @@ async function makeReport(lead, db) {
     if (item.score > 0) similar.push(`律师规则加分：${item.label}${item.evidence.length ? `（${item.evidence.join("、")}）` : ""}。`);
   });
   if (!suspiciousContext && productIdentity.type !== "suspected_accused") similar.push("当前仅识别到图片内容，缺少销售链接、疑似对象、来源场景或人工描述，不能仅凭单张图片推定侵权或假冒。");
-  if (hasTrademark) similar.push("线索描述或 OCR 结果中出现疑似品牌、商标、Logo 或近似标识，需要与权利商标进一步比对。");
+  if (hasTrademark) similar.push("线索描述或多模态识别结果中出现疑似品牌、商标、Logo 或近似标识，需要与权利商标进一步比对。");
   if (hasPackage) similar.push("线索涉及瓶型、酒盒、标签、色彩或包装装潢等元素，可能存在组合相似点。");
   matchedCourtFactors.forEach((factor) => similar.push(`命中法院判词相似要素：${factor}。`));
   docMatches.courtReasons.forEach((reason) => similar.push(`律所资料判词理由：${reason}。`));
   if (hasDoor) similar.push("门头或店铺文字可能与酒类品牌经营标识形成关联，需要核对实际经营主体和授权情况。");
-  if (modelResult?.similarities?.length) modelResult.similarities.forEach((item) => similar.push(`视觉模型辅助提示：${item}`));
+  if (modelResult?.similarities?.length) modelResult.similarities.forEach((item) => similar.push(`多模态模型辅助提示：${item}`));
+  if (featureComparison?.keySimilarities?.length) {
+    featureComparison.keySimilarities.forEach((item) => similar.push(`成对特征比对相似点：${item}`));
+  }
   if (!similar.length) similar.push("当前材料未呈现清晰的核心商标或包装装潢相似点。");
 
   const differences = [];
-  differences.push("当前已接入正品样本和高风险样本；未找到相似样本或证据冲突时，仍需要补充正面、背标、酒盒和来源场景做人工复核。");
+  differences.push("当前已接入正品样本和问题样本；如果参考信息不足或关键事实未确认，仍需要补充正面、背标、酒盒和来源场景。");
   if (productIdentity.type === "likely_authentic") differences.push("图片识别结果更接近权利产品自身，当前未发现第三方被控名称或搭便车标识。");
   if (structuredEvidence.officialSignals.length && !structuredEvidence.thirdPartySignals.length) differences.push(`结构化正品信号：${structuredEvidence.officialSignals.join("、")}。`);
   if (structuredEvidence.thirdPartySignals.length) differences.push(`结构化第三方/异常信号：${structuredEvidence.thirdPartySignals.join("、")}。`);
@@ -1801,7 +1927,10 @@ async function makeReport(lead, db) {
   if (!suspiciousContext) differences.push("单张图片若为权利人正品图，命中权利对象特征本身不是侵权风险，应重点查是否存在第三方来源或仿冒标识。");
   if (!imageProvided) differences.push("未上传图片，无法比对瓶身、酒盒、标签和门头视觉细节。");
   if (!lead.brandHint) differences.push("未填写疑似关联品牌，权利基础匹配不充分。");
-  if (modelResult?.differences?.length) modelResult.differences.forEach((item) => differences.push(`视觉模型辅助提示：${item}`));
+  if (modelResult?.differences?.length) modelResult.differences.forEach((item) => differences.push(`多模态模型辅助提示：${item}`));
+  if (featureComparison?.keyDifferences?.length) {
+    featureComparison.keyDifferences.forEach((item) => differences.push(`成对特征比对差异点：${item}`));
+  }
 
   const evidenceGaps = [];
   if (!imageProvided) evidenceGaps.push("缺少清晰图片，建议补充正面、侧面、瓶盖、酒盒和门头照片。");
@@ -1809,7 +1938,10 @@ async function makeReport(lead, db) {
   if (!hasLink) evidenceGaps.push("缺少商品页、店铺页、POI 或来源链接。");
   if (!structuredEvidence.imageVectorMatch) evidenceGaps.push("暂未找到相似的正品或高风险样本，需要补充更多样本或人工复核。");
   evidenceGaps.push("缺少对应商标注册信息、包装装潢知名度材料或历史案例引用。");
-  if (modelResult?.evidenceGaps?.length) modelResult.evidenceGaps.forEach((item) => evidenceGaps.push(`视觉模型辅助提示：${item}`));
+  if (modelResult?.evidenceGaps?.length) modelResult.evidenceGaps.forEach((item) => evidenceGaps.push(`多模态模型辅助提示：${item}`));
+  if (featureComparison?.uncertainty?.length) {
+    featureComparison.uncertainty.forEach((item) => evidenceGaps.push(`成对特征比对不确定点：${item}`));
+  }
 
   const localRightsBasis = matchedRights.length || docMatches.rightBases.length || effectiveAccusedMatches.length ? [
     ...matchedRights.map((right) => `${right.type}：${right.title}`),
@@ -1821,11 +1953,11 @@ async function makeReport(lead, db) {
   ];
   const rightsBasis = [
     ...localRightsBasis,
-    ...(modelResult?.matchedRights || []).map((item) => `图片识别提示，需复核：${item}`)
+    ...(modelResult?.matchedRights || []).map((item) => `多模态识别提示，需复核：${item}`)
   ];
   const courtFactors = [
     ...((matchedCourtFactors.length || scoring.courtFactorNames.length) ? [...new Set([...matchedCourtFactors, ...scoring.courtFactorNames])] : ["暂未发现明确律师关注要素"]),
-    ...(modelResult?.matchedCourtFactors || []).map((item) => `图片识别提示，需复核：${item}`)
+    ...(modelResult?.matchedCourtFactors || []).map((item) => `多模态识别提示，需复核：${item}`)
   ];
   const evidenceDecision = buildEvidenceDecision({
     productIdentity,
@@ -1849,8 +1981,8 @@ async function makeReport(lead, db) {
     needs_review: "人工复核"
   };
   const conclusionByDecision = {
-    conflict_review: `当前证据存在冲突：${evidenceDecision.conflictPoints.join("；")} 线索风险评分 ${infringementProbability}%，建议先由律师复核冲突证据。`,
-    authentic_protected: `图片内容更接近权利人正品/权利产品样式，且未见有效第三方被控证据，暂按低风险或正品保护处理；线索风险评分 ${infringementProbability}%。`,
+    conflict_review: `当前还有关键信息需要确认：${evidenceDecision.conflictPoints.join("；")} 可疑程度 ${infringementProbability}%，建议律师先核实材料来源和授权情况。`,
+    authentic_protected: `当前未看到仿冒标识、非习酒方使用或律师资料中已确认的问题产品名称，暂按低风险处理；可疑程度 ${infringementProbability}%。`,
     high_risk: `高风险证据较集中，已命中律师结构化规则或确认样本，线索风险评分 ${infringementProbability}%，建议重点取证。`,
     insufficient_context: `当前材料不足，缺少来源、销售场景或关键主体信息；线索风险评分 ${infringementProbability}%，建议先补证再判断。`,
     mid_risk_review: `当前存在部分风险要素，但证据链尚不完整；线索风险评分 ${infringementProbability}%，建议补充取证并人工复核。`,
@@ -1868,6 +2000,8 @@ async function makeReport(lead, db) {
     productIdentity,
     modelUsed: modelResult ? `律师知识库规则优先 + ${activeModelName()}辅助识别` : (modelError ? readableModelError(modelError) : "律师知识库规则优先"),
     modelError,
+    featureComparison,
+    featureComparisonError,
     modelProbability,
     modelStructuredVisualAssessment: modelResult?.structuredVisualAssessment || null,
     structuredEvidence,
@@ -1928,10 +2062,11 @@ async function makeReport(lead, db) {
     lawyerReviewQuestions: [
       "疑似标识是否落入有效商标权利范围？",
       "相似包装装潢是否具备可保护的识别性和影响力？",
-      ...evidenceDecision.conflictPoints.map((item) => `冲突复核：${item}`),
+      ...evidenceDecision.conflictPoints.map((item) => `重点确认：${item}`),
       "现有图片是否足以支撑进一步取证或仅能作为线索？",
       "经营主体、销售链接和商品来源是否可被固定？",
-      ...(modelResult?.reviewQuestions || []).map((item) => `视觉模型建议复核：${item}`)
+      ...(modelResult?.reviewQuestions || []).map((item) => `多模态模型建议复核：${item}`),
+      ...(featureComparison?.suggestedReviewFocus || []).map((item) => `成对特征比对建议复核：${item}`)
     ],
     matchedRules
   };
@@ -1969,7 +2104,7 @@ async function makeReport(lead, db) {
 async function routeApi(req, res, pathname) {
   const db = await readDb();
   if (req.method === "GET" && pathname === "/api/leads") {
-    json(res, 200, db.leads.map(publicLead));
+    json(res, 200, await Promise.all(db.leads.map(publicLead)));
     return;
   }
   if (req.method === "GET" && pathname === "/api/rules") {
@@ -1994,7 +2129,7 @@ async function routeApi(req, res, pathname) {
     lead.report = await makeReport(lead, db);
     lead.status = "已生成初筛报告";
     await writeDb(db);
-    json(res, 200, publicLead(lead));
+    json(res, 200, await publicLead(lead));
     return;
   }
   const feedbackMatch = pathname.match(/^\/api\/leads\/([^/]+)\/feedback$/);
@@ -2009,7 +2144,7 @@ async function routeApi(req, res, pathname) {
       createdAt: new Date().toISOString()
     });
     await writeDb(db);
-    json(res, 200, publicLead(lead));
+    json(res, 200, await publicLead(lead));
     return;
   }
   json(res, 404, { error: "not_found" });
@@ -2017,7 +2152,7 @@ async function routeApi(req, res, pathname) {
 
 export async function listLeads() {
   const db = await readDb();
-  return db.leads.map(publicLead);
+  return Promise.all(db.leads.map(publicLead));
 }
 
 export async function getLead(id) {

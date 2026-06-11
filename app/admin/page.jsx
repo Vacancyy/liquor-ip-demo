@@ -81,7 +81,7 @@ export default async function AdminPage() {
           <div>
             <span>后台工作台</span>
             <h2>知识库运营、策略调节和样本回流集中管理</h2>
-            <p>当前策略：{data.judgementConfig.strategy.name}。高风险阈值 {data.judgementConfig.strategy.highRiskThreshold}，向量相似阈值 {data.judgementConfig.strategy.embeddingSimilarityThreshold}。</p>
+            <p>当前策略：{data.judgementConfig.strategy.name}。高风险阈值 {data.judgementConfig.strategy.highRiskThreshold}，相似候选阈值 {data.judgementConfig.strategy.embeddingSimilarityThreshold}。</p>
           </div>
           <div className="admin-hero-panel">
             <div>
